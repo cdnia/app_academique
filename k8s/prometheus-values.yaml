@@ -1,0 +1,13 @@
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    scrapeInterval: "15s"
+
+grafana:
+  adminPassword: "admin"
+  service:
+    type: ClusterIP
+
+alertmanager:
+  enabled: false

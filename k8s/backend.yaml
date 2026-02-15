@@ -54,6 +54,8 @@ kind: Service
 metadata:
   name: fastapi-service
   namespace: academic
+  labels:
+    app: fastapi-backend
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "8000"
@@ -62,6 +64,7 @@ spec:
   selector:
     app: fastapi-backend
   ports:
-    - port: 8000
+    - name: http
+      port: 8000
       targetPort: 8000
   type: ClusterIP
