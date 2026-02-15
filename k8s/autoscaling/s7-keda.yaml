@@ -1,0 +1,19 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: fastapi-keda
+  namespace: academic
+spec:
+  scaleTargetRef:
+    name: fastapi-backend
+  minReplicaCount: 0
+  maxReplicaCount: 10
+  pollingInterval: 15
+  cooldownPeriod: 60
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus-kube-prometheus-prometheus.academic.svc.cluster.local:9090
+        query: sum(rate(http_requests_total{namespace="academic",service="fastapi-service"}[1m]))
+        threshold: "50"
+        activationThreshold: "1"

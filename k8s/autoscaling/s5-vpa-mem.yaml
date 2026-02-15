@@ -1,0 +1,20 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: fastapi-vpa-mem
+  namespace: academic
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: fastapi-backend
+  updatePolicy:
+    updateMode: "Off"
+  resourcePolicy:
+    containerPolicies:
+      - containerName: fastapi-backend
+        controlledResources: ["memory"]
+        minAllowed:
+          memory: 64Mi
+        maxAllowed:
+          memory: 512Mi
