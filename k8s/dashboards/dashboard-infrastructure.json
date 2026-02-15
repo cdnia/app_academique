@@ -1,0 +1,74 @@
+{
+  "dashboard": {
+    "title": "Academic API - Infrastructure",
+    "tags": ["academic", "kubernetes"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "title": "CPU par pod",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"academic\", pod=~\"fastapi-backend.*\", container=\"fastapi-backend\"}[2m])) by (pod)",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit"
+          }
+        }
+      },
+      {
+        "title": "Mémoire par pod",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(container_memory_working_set_bytes{namespace=\"academic\", pod=~\"fastapi-backend.*\", container=\"fastapi-backend\"}) by (pod)",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "title": "CPU par nœud",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "sum(rate(node_cpu_seconds_total{mode!=\"idle\"}[2m])) by (instance)",
+            "legendFormat": "{{instance}}"
+          }
+        ]
+      },
+      {
+        "title": "Mémoire par nœud",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+        "targets": [
+          {
+            "expr": "node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes",
+            "legendFormat": "{{instance}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes"
+          }
+        }
+      }
+    ]
+  },
+  "overwrite": true
+}

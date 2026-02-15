@@ -1,0 +1,124 @@
+{
+  "dashboard": {
+    "title": "Academic API - Autoscaling",
+    "tags": ["academic", "autoscaling"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "title": "Replicas en temps réel",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "kube_deployment_spec_replicas{namespace=\"academic\", deployment=\"fastapi-backend\"}",
+            "legendFormat": "Desired"
+          },
+          {
+            "expr": "kube_deployment_status_replicas_available{namespace=\"academic\", deployment=\"fastapi-backend\"}",
+            "legendFormat": "Available"
+          },
+          {
+            "expr": "kube_deployment_status_replicas_ready{namespace=\"academic\", deployment=\"fastapi-backend\"}",
+            "legendFormat": "Ready"
+          }
+        ]
+      },
+      {
+        "title": "HPA - Replicas cible vs actuel",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+        "targets": [
+          {
+            "expr": "kube_horizontalpodautoscaler_status_desired_replicas{namespace=\"academic\"}",
+            "legendFormat": "Desired ({{horizontalpodautoscaler}})"
+          },
+          {
+            "expr": "kube_horizontalpodautoscaler_status_current_replicas{namespace=\"academic\"}",
+            "legendFormat": "Current ({{horizontalpodautoscaler}})"
+          }
+        ]
+      },
+      {
+        "title": "CPU utilisation vs request",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"academic\", pod=~\"fastapi-backend.*\", container=\"fastapi-backend\"}[2m])) by (pod)",
+            "legendFormat": "Usage {{pod}}"
+          },
+          {
+            "expr": "sum(kube_pod_container_resource_requests{namespace=\"academic\", pod=~\"fastapi-backend.*\", container=\"fastapi-backend\", resource=\"cpu\"}) by (pod)",
+            "legendFormat": "Request {{pod}}"
+          }
+        ]
+      },
+      {
+        "title": "RPS par pod (Custom Metric)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{namespace=\"academic\", service=\"fastapi-service\"}[1m])) by (pod)",
+            "legendFormat": "{{pod}}"
+          }
+        ]
+      },
+      {
+        "title": "Pods Pending",
+        "type": "stat",
+        "gridPos": { "h": 4, "w": 6, "x": 0, "y": 16 },
+        "targets": [
+          {
+            "expr": "kube_pod_status_phase{namespace=\"academic\", phase=\"Pending\"}",
+            "legendFormat": "{{pod}}"
+          }
+        ]
+      },
+      {
+        "title": "Scale events (scaling up/down)",
+        "type": "stat",
+        "gridPos": { "h": 4, "w": 6, "x": 6, "y": 16 },
+        "targets": [
+          {
+            "expr": "kube_horizontalpodautoscaler_status_desired_replicas{namespace=\"academic\"} - kube_horizontalpodautoscaler_status_current_replicas{namespace=\"academic\"}",
+            "legendFormat": "Delta ({{horizontalpodautoscaler}})"
+          }
+        ]
+      },
+      {
+        "title": "VPA Recommandations CPU",
+        "type": "stat",
+        "gridPos": { "h": 4, "w": 6, "x": 12, "y": 16 },
+        "targets": [
+          {
+            "expr": "kube_verticalpodautoscaler_status_recommendation_containerrecommendations_target{namespace=\"academic\", resource=\"cpu\"}",
+            "legendFormat": "{{verticalpodautoscaler}}"
+          }
+        ]
+      },
+      {
+        "title": "VPA Recommandations Mémoire",
+        "type": "stat",
+        "gridPos": { "h": 4, "w": 6, "x": 18, "y": 16 },
+        "targets": [
+          {
+            "expr": "kube_verticalpodautoscaler_status_recommendation_containerrecommendations_target{namespace=\"academic\", resource=\"memory\"}",
+            "legendFormat": "{{verticalpodautoscaler}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes"
+          }
+        }
+      }
+    ]
+  },
+  "overwrite": true
+}

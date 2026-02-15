@@ -1,0 +1,71 @@
+{
+  "dashboard": {
+    "title": "Academic API - Applicatif",
+    "tags": ["academic", "fastapi"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "title": "RPS par endpoint",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{namespace=\"academic\", service=\"fastapi-service\"}[1m])) by (handler)",
+            "legendFormat": "{{handler}}"
+          }
+        ]
+      },
+      {
+        "title": "RPS total",
+        "type": "stat",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{namespace=\"academic\", service=\"fastapi-service\"}[1m]))",
+            "legendFormat": "Total RPS"
+          }
+        ]
+      },
+      {
+        "title": "Latence P50 / P95 / P99",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.50, sum(rate(http_request_duration_seconds_bucket{namespace=\"academic\", service=\"fastapi-service\"}[1m])) by (le))",
+            "legendFormat": "P50"
+          },
+          {
+            "expr": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{namespace=\"academic\", service=\"fastapi-service\"}[1m])) by (le))",
+            "legendFormat": "P95"
+          },
+          {
+            "expr": "histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket{namespace=\"academic\", service=\"fastapi-service\"}[1m])) by (le))",
+            "legendFormat": "P99"
+          }
+        ]
+      },
+      {
+        "title": "Erreurs 4xx / 5xx",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{namespace=\"academic\", service=\"fastapi-service\", status=~\"4..\"}[1m]))",
+            "legendFormat": "4xx"
+          },
+          {
+            "expr": "sum(rate(http_requests_total{namespace=\"academic\", service=\"fastapi-service\", status=~\"5..\"}[1m]))",
+            "legendFormat": "5xx"
+          }
+        ]
+      }
+    ]
+  },
+  "overwrite": true
+}

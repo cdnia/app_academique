@@ -1,0 +1,72 @@
+{
+  "dashboard": {
+    "title": "Academic API - k6 Load Tests",
+    "tags": ["academic", "k6"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "title": "VUs actifs",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "k6_vus{job=\"k6\"}",
+            "legendFormat": "VUs"
+          }
+        ]
+      },
+      {
+        "title": "RPS (k6)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+        "targets": [
+          {
+            "expr": "rate(k6_http_reqs_total{job=\"k6\"}[1m])",
+            "legendFormat": "RPS"
+          }
+        ]
+      },
+      {
+        "title": "Durée des requêtes (k6)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "k6_http_req_duration_p50{job=\"k6\"}",
+            "legendFormat": "P50"
+          },
+          {
+            "expr": "k6_http_req_duration_p95{job=\"k6\"}",
+            "legendFormat": "P95"
+          },
+          {
+            "expr": "k6_http_req_duration_p99{job=\"k6\"}",
+            "legendFormat": "P99"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "title": "Taux d'erreurs (k6)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+        "targets": [
+          {
+            "expr": "rate(k6_http_req_failed_total{job=\"k6\"}[1m])",
+            "legendFormat": "Erreurs/s"
+          }
+        ]
+      }
+    ]
+  },
+  "overwrite": true
+}
