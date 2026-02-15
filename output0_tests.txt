@@ -1,0 +1,2885 @@
+==============================================
+Lancement de 24 tests
+Durée estimée: ~33 minutes
+Début: Sun Feb 15 07:38:09 PM GMT 2026
+==============================================
+
+> > > > > > > > > > # Test 1/24 : s1/c2/run1 <<<<<<<<<<
+
+# Stratégie: s1 | Scénario: c2 | Run: 1
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (11m ago) 28m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (15m ago) 27m
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+Relance du port-forward...
+Forwarding from 127.0.0.1:8000 -> 8000
+Forwarding from [::1]:8000 -> 8000
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+
+/ \/ \ | |/ / / ‾‾\
+/ \ | ( | (‾) |
+/ ****\_\_**** \ |\_|\_\ \_\_\_\_\_/
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s1/c2/run1_20260215_193845.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m01.0s), 006/200 VUs, 2 complete and 0 interrupted iterations
+inscription_peak [ 1% ] 006/200 VUs 0m01.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m02.0s), 013/200 VUs, 17 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 013/200 VUs 0m02.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m03.0s), 019/200 VUs, 45 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 019/200 VUs 0m03.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m04.0s), 026/200 VUs, 85 complete and 0 interrupted iterations
+inscription_peak [ 3% ] 026/200 VUs 0m04.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m05.0s), 033/200 VUs, 139 complete and 0 interrupted iterations
+inscription_peak [ 4% ] 033/200 VUs 0m05.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m06.0s), 039/200 VUs, 207 complete and 0 interrupted iterations
+inscription_peak [ 5% ] 039/200 VUs 0m06.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m07.0s), 046/200 VUs, 283 complete and 0 interrupted iterations
+inscription_peak [ 6% ] 046/200 VUs 0m07.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m08.0s), 053/200 VUs, 323 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 053/200 VUs 0m08.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m09.0s), 059/200 VUs, 323 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 059/200 VUs 0m09.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m10.0s), 066/200 VUs, 390 complete and 0 interrupted iterations
+inscription_peak [ 8% ] 066/200 VUs 0m10.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m11.0s), 073/200 VUs, 395 complete and 0 interrupted iterations
+inscription_peak [ 9% ] 073/200 VUs 0m11.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m12.0s), 079/200 VUs, 395 complete and 0 interrupted iterations
+inscription_peak [ 10% ] 079/200 VUs 0m12.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m13.0s), 086/200 VUs, 478 complete and 0 interrupted iterations
+inscription_peak [ 11% ] 086/200 VUs 0m13.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m14.0s), 093/200 VUs, 480 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 093/200 VUs 0m14.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m15.0s), 099/200 VUs, 481 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 099/200 VUs 0m15.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m16.0s), 106/200 VUs, 556 complete and 0 interrupted iterations
+inscription_peak [ 13% ] 106/200 VUs 0m16.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m17.0s), 113/200 VUs, 625 complete and 0 interrupted iterations
+inscription_peak [ 14% ] 113/200 VUs 0m17.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m18.0s), 119/200 VUs, 706 complete and 0 interrupted iterations
+inscription_peak [ 15% ] 119/200 VUs 0m18.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m19.0s), 126/200 VUs, 767 complete and 0 interrupted iterations
+inscription_peak [ 16% ] 126/200 VUs 0m19.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m20.0s), 133/200 VUs, 854 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 133/200 VUs 0m20.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m21.0s), 139/200 VUs, 940 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 139/200 VUs 0m21.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m22.0s), 146/200 VUs, 1018 complete and 0 interrupted iterations
+inscription_peak [ 18% ] 146/200 VUs 0m22.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m23.0s), 153/200 VUs, 1102 complete and 0 interrupted iterations
+inscription_peak [ 19% ] 153/200 VUs 0m23.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m24.0s), 159/200 VUs, 1133 complete and 0 interrupted iterations
+inscription_peak [ 20% ] 159/200 VUs 0m24.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m25.0s), 166/200 VUs, 1216 complete and 0 interrupted iterations
+inscription_peak [ 21% ] 166/200 VUs 0m25.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m26.0s), 173/200 VUs, 1286 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 173/200 VUs 0m26.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m27.0s), 179/200 VUs, 1326 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 179/200 VUs 0m27.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m28.0s), 186/200 VUs, 1394 complete and 0 interrupted iterations
+inscription_peak [ 23% ] 186/200 VUs 0m28.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m29.0s), 193/200 VUs, 1472 complete and 0 interrupted iterations
+inscription_peak [ 24% ] 193/200 VUs 0m29.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m30.0s), 199/200 VUs, 1553 complete and 0 interrupted iterations
+inscription_peak [ 25% ] 199/200 VUs 0m30.0s/2m00.0s
+Handling connection for 8000
+
+running (0m31.0s), 200/200 VUs, 1624 complete and 0 interrupted iterations
+inscription_peak [ 26% ] 200/200 VUs 0m31.0s/2m00.0s
+
+running (0m32.0s), 200/200 VUs, 1696 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m32.0s/2m00.0s
+
+running (0m33.0s), 200/200 VUs, 1775 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m33.0s/2m00.0s
+
+running (0m34.0s), 200/200 VUs, 1861 complete and 0 interrupted iterations
+inscription_peak [ 28% ] 200/200 VUs 0m34.0s/2m00.0s
+
+running (0m35.0s), 200/200 VUs, 1986 complete and 0 interrupted iterations
+inscription_peak [ 29% ] 200/200 VUs 0m35.0s/2m00.0s
+
+running (0m36.0s), 200/200 VUs, 2096 complete and 0 interrupted iterations
+inscription_peak [ 30% ] 200/200 VUs 0m36.0s/2m00.0s
+
+running (0m37.0s), 200/200 VUs, 2182 complete and 0 interrupted iterations
+inscription_peak [ 31% ] 200/200 VUs 0m37.0s/2m00.0s
+
+running (0m38.0s), 200/200 VUs, 2229 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m38.0s/2m00.0s
+
+running (0m39.0s), 200/200 VUs, 2343 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m39.0s/2m00.0s
+
+running (0m40.0s), 200/200 VUs, 2423 complete and 0 interrupted iterations
+inscription_peak [ 33% ] 200/200 VUs 0m40.0s/2m00.0s
+
+running (0m41.0s), 200/200 VUs, 2509 complete and 0 interrupted iterations
+inscription_peak [ 34% ] 200/200 VUs 0m41.0s/2m00.0s
+
+running (0m42.0s), 200/200 VUs, 2593 complete and 0 interrupted iterations
+inscription_peak [ 35% ] 200/200 VUs 0m42.0s/2m00.0s
+
+running (0m43.0s), 200/200 VUs, 2673 complete and 0 interrupted iterations
+inscription_peak [ 36% ] 200/200 VUs 0m43.0s/2m00.0s
+
+running (0m44.0s), 200/200 VUs, 2733 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m44.0s/2m00.0s
+
+running (0m45.0s), 200/200 VUs, 2814 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m45.0s/2m00.0s
+
+running (0m46.0s), 200/200 VUs, 2837 complete and 0 interrupted iterations
+inscription_peak [ 38% ] 200/200 VUs 0m46.0s/2m00.0s
+
+running (0m47.0s), 200/200 VUs, 2930 complete and 0 interrupted iterations
+inscription_peak [ 39% ] 200/200 VUs 0m47.0s/2m00.0s
+
+running (0m48.0s), 200/200 VUs, 3017 complete and 0 interrupted iterations
+inscription_peak [ 40% ] 200/200 VUs 0m48.0s/2m00.0s
+
+running (0m49.0s), 200/200 VUs, 3102 complete and 0 interrupted iterations
+inscription_peak [ 41% ] 200/200 VUs 0m49.0s/2m00.0s
+
+running (0m50.0s), 200/200 VUs, 3171 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m50.0s/2m00.0s
+
+running (0m51.0s), 200/200 VUs, 3255 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m51.0s/2m00.0s
+
+running (0m52.0s), 200/200 VUs, 3344 complete and 0 interrupted iterations
+inscription_peak [ 43% ] 200/200 VUs 0m52.0s/2m00.0s
+
+running (0m53.0s), 200/200 VUs, 3430 complete and 0 interrupted iterations
+inscription_peak [ 44% ] 200/200 VUs 0m53.0s/2m00.0s
+
+running (0m54.0s), 200/200 VUs, 3481 complete and 0 interrupted iterations
+inscription_peak [ 45% ] 200/200 VUs 0m54.0s/2m00.0s
+
+running (0m55.0s), 200/200 VUs, 3590 complete and 0 interrupted iterations
+inscription_peak [ 46% ] 200/200 VUs 0m55.0s/2m00.0s
+
+running (0m56.0s), 200/200 VUs, 3663 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m56.0s/2m00.0s
+
+running (0m57.0s), 200/200 VUs, 3741 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m57.0s/2m00.0s
+
+running (0m58.0s), 200/200 VUs, 3820 complete and 0 interrupted iterations
+inscription_peak [ 48% ] 200/200 VUs 0m58.0s/2m00.0s
+
+running (0m59.0s), 200/200 VUs, 4038 complete and 0 interrupted iterations
+inscription_peak [ 49% ] 200/200 VUs 0m59.0s/2m00.0s
+
+running (1m00.0s), 200/200 VUs, 4237 complete and 0 interrupted iterations
+inscription_peak [ 50% ] 200/200 VUs 1m00.0s/2m00.0s
+
+running (1m01.0s), 200/200 VUs, 4408 complete and 0 interrupted iterations
+inscription_peak [ 51% ] 200/200 VUs 1m01.0s/2m00.0s
+
+running (1m02.0s), 200/200 VUs, 4497 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m02.0s/2m00.0s
+
+running (1m03.0s), 200/200 VUs, 4585 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m03.0s/2m00.0s
+
+running (1m04.0s), 200/200 VUs, 4678 complete and 0 interrupted iterations
+inscription_peak [ 53% ] 200/200 VUs 1m04.0s/2m00.0s
+
+running (1m05.0s), 200/200 VUs, 4794 complete and 0 interrupted iterations
+inscription_peak [ 54% ] 200/200 VUs 1m05.0s/2m00.0s
+
+running (1m06.0s), 200/200 VUs, 4867 complete and 0 interrupted iterations
+inscription_peak [ 55% ] 200/200 VUs 1m06.0s/2m00.0s
+
+running (1m07.0s), 200/200 VUs, 4904 complete and 0 interrupted iterations
+inscription_peak [ 56% ] 200/200 VUs 1m07.0s/2m00.0s
+
+running (1m08.0s), 200/200 VUs, 4976 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m08.0s/2m00.0s
+
+running (1m09.0s), 200/200 VUs, 5047 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m09.0s/2m00.0s
+
+running (1m10.0s), 200/200 VUs, 5139 complete and 0 interrupted iterations
+inscription_peak [ 58% ] 200/200 VUs 1m10.0s/2m00.0s
+
+running (1m11.0s), 200/200 VUs, 5222 complete and 0 interrupted iterations
+inscription_peak [ 59% ] 200/200 VUs 1m11.0s/2m00.0s
+
+running (1m12.0s), 200/200 VUs, 5309 complete and 0 interrupted iterations
+inscription_peak [ 60% ] 200/200 VUs 1m12.0s/2m00.0s
+
+running (1m13.0s), 200/200 VUs, 5393 complete and 0 interrupted iterations
+inscription_peak [ 61% ] 200/200 VUs 1m13.0s/2m00.0s
+
+running (1m14.0s), 200/200 VUs, 5476 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m14.0s/2m00.0s
+
+running (1m15.0s), 200/200 VUs, 5553 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m15.0s/2m00.0s
+
+running (1m16.0s), 200/200 VUs, 5609 complete and 0 interrupted iterations
+inscription_peak [ 63% ] 200/200 VUs 1m16.0s/2m00.0s
+
+running (1m17.0s), 200/200 VUs, 5686 complete and 0 interrupted iterations
+inscription_peak [ 64% ] 200/200 VUs 1m17.0s/2m00.0s
+
+running (1m18.0s), 200/200 VUs, 5753 complete and 0 interrupted iterations
+inscription_peak [ 65% ] 200/200 VUs 1m18.0s/2m00.0s
+
+running (1m19.0s), 200/200 VUs, 5833 complete and 0 interrupted iterations
+inscription_peak [ 66% ] 200/200 VUs 1m19.0s/2m00.0s
+
+running (1m20.0s), 200/200 VUs, 5950 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m20.0s/2m00.0s
+
+running (1m21.0s), 200/200 VUs, 6012 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m21.0s/2m00.0s
+
+running (1m22.0s), 200/200 VUs, 6098 complete and 0 interrupted iterations
+inscription_peak [ 68% ] 200/200 VUs 1m22.0s/2m00.0s
+
+running (1m23.0s), 200/200 VUs, 6182 complete and 0 interrupted iterations
+inscription_peak [ 69% ] 200/200 VUs 1m23.0s/2m00.0s
+
+running (1m24.0s), 200/200 VUs, 6268 complete and 0 interrupted iterations
+inscription_peak [ 70% ] 200/200 VUs 1m24.0s/2m00.0s
+
+running (1m25.0s), 200/200 VUs, 6350 complete and 0 interrupted iterations
+inscription_peak [ 71% ] 200/200 VUs 1m25.0s/2m00.0s
+
+running (1m26.0s), 200/200 VUs, 6399 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m26.0s/2m00.0s
+
+running (1m27.0s), 200/200 VUs, 6453 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m27.0s/2m00.0s
+
+running (1m28.0s), 200/200 VUs, 6470 complete and 0 interrupted iterations
+inscription_peak [ 73% ] 200/200 VUs 1m28.0s/2m00.0s
+
+running (1m29.0s), 200/200 VUs, 6539 complete and 0 interrupted iterations
+inscription_peak [ 74% ] 200/200 VUs 1m29.0s/2m00.0s
+
+running (1m30.0s), 200/200 VUs, 6600 complete and 0 interrupted iterations
+inscription_peak [ 75% ] 200/200 VUs 1m30.0s/2m00.0s
+
+running (1m31.0s), 200/200 VUs, 6653 complete and 0 interrupted iterations
+inscription_peak [ 76% ] 200/200 VUs 1m31.0s/2m00.0s
+
+running (1m32.0s), 197/200 VUs, 6709 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 197/200 VUs 1m32.0s/2m00.0s
+
+running (1m33.0s), 192/200 VUs, 6776 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 192/200 VUs 1m33.0s/2m00.0s
+
+running (1m34.0s), 185/200 VUs, 6844 complete and 0 interrupted iterations
+inscription_peak [ 78% ] 185/200 VUs 1m34.0s/2m00.0s
+
+running (1m35.0s), 174/200 VUs, 6971 complete and 0 interrupted iterations
+inscription_peak [ 79% ] 174/200 VUs 1m35.0s/2m00.0s
+
+running (1m36.0s), 167/200 VUs, 7072 complete and 0 interrupted iterations
+inscription_peak [ 80% ] 167/200 VUs 1m36.0s/2m00.0s
+
+running (1m37.0s), 163/200 VUs, 7143 complete and 0 interrupted iterations
+inscription_peak [ 81% ] 163/200 VUs 1m37.0s/2m00.0s
+
+running (1m38.0s), 152/200 VUs, 7231 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 152/200 VUs 1m38.0s/2m00.0s
+
+running (1m39.0s), 148/200 VUs, 7309 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 148/200 VUs 1m39.0s/2m00.0s
+
+running (1m40.0s), 141/200 VUs, 7405 complete and 0 interrupted iterations
+inscription_peak [ 83% ] 141/200 VUs 1m40.0s/2m00.0s
+
+running (1m41.0s), 129/200 VUs, 7529 complete and 0 interrupted iterations
+inscription_peak [ 84% ] 129/200 VUs 1m41.0s/2m00.0s
+
+running (1m42.0s), 127/200 VUs, 7603 complete and 0 interrupted iterations
+inscription_peak [ 85% ] 127/200 VUs 1m42.0s/2m00.0s
+
+running (1m43.0s), 120/200 VUs, 7682 complete and 0 interrupted iterations
+inscription_peak [ 86% ] 120/200 VUs 1m43.0s/2m00.0s
+
+running (1m44.0s), 116/200 VUs, 7749 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 116/200 VUs 1m44.0s/2m00.0s
+
+running (1m45.0s), 104/200 VUs, 7843 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 104/200 VUs 1m45.0s/2m00.0s
+
+running (1m46.0s), 102/200 VUs, 7905 complete and 0 interrupted iterations
+inscription_peak [ 88% ] 102/200 VUs 1m46.0s/2m00.0s
+
+running (1m47.0s), 095/200 VUs, 7993 complete and 0 interrupted iterations
+inscription_peak [ 89% ] 095/200 VUs 1m47.0s/2m00.0s
+
+running (1m48.0s), 089/200 VUs, 8064 complete and 0 interrupted iterations
+inscription_peak [ 90% ] 089/200 VUs 1m48.0s/2m00.0s
+
+running (1m49.0s), 077/200 VUs, 8154 complete and 0 interrupted iterations
+inscription_peak [ 91% ] 077/200 VUs 1m49.0s/2m00.0s
+
+running (1m50.0s), 070/200 VUs, 8237 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 070/200 VUs 1m50.0s/2m00.0s
+
+running (1m51.0s), 064/200 VUs, 8325 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 064/200 VUs 1m51.0s/2m00.0s
+
+running (1m52.0s), 056/200 VUs, 8405 complete and 0 interrupted iterations
+inscription_peak [ 93% ] 056/200 VUs 1m52.0s/2m00.0s
+
+running (1m53.0s), 052/200 VUs, 8462 complete and 0 interrupted iterations
+inscription_peak [ 94% ] 052/200 VUs 1m53.0s/2m00.0s
+
+running (1m54.0s), 052/200 VUs, 8463 complete and 0 interrupted iterations
+inscription_peak [ 95% ] 052/200 VUs 1m54.0s/2m00.0s
+
+running (1m55.0s), 037/200 VUs, 8518 complete and 0 interrupted iterations
+inscription_peak [ 96% ] 037/200 VUs 1m55.0s/2m00.0s
+
+running (1m56.0s), 033/200 VUs, 8567 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 033/200 VUs 1m56.0s/2m00.0s
+
+running (1m57.0s), 031/200 VUs, 8571 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 031/200 VUs 1m57.0s/2m00.0s
+
+running (1m58.0s), 025/200 VUs, 8578 complete and 0 interrupted iterations
+inscription_peak [ 98% ] 025/200 VUs 1m58.0s/2m00.0s
+
+running (1m59.0s), 010/200 VUs, 8617 complete and 0 interrupted iterations
+inscription_peak [ 99% ] 010/200 VUs 1m59.0s/2m00.0s
+
+running (2m00.0s), 004/200 VUs, 8632 complete and 0 interrupted iterations
+inscription_peak [ 100% ] 004/200 VUs 2m00.0s/2m00.0s
+
+█ THRESHOLDS
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=4.85s
+
+    http_req_failed
+    ✗ 'rate<0.05' rate=26.66%
+
+█ TOTAL RESULTS
+
+    checks_total.......: 8636   71.891016/s
+    checks_succeeded...: 73.33% 6333 out of 8636
+    checks_failed......: 26.66% 2303 out of 8636
+
+    ✓ status is 200
+    ✗ created 201
+      ↳  12% — ✓ 341 / ✗ 2303
+
+    HTTP
+    http_req_duration..............: avg=1.6s  min=3.33ms   med=1.3s max=16.85s p(90)=3.69s p(95)=4.85s
+      { expected_response:true }...: avg=1.55s min=4.06ms   med=1.2s max=14.3s  p(90)=3.65s p(95)=4.77s
+    http_req_failed................: 26.66% 2303 out of 8636
+    http_reqs......................: 8636   71.891016/s
+
+    EXECUTION
+    iteration_duration.............: avg=2.1s  min=503.81ms med=1.8s max=17.35s p(90)=4.19s p(95)=5.35s
+    iterations.....................: 8636   71.891016/s
+    vus............................: 4      min=4            max=200
+    vus_max........................: 200    min=200          max=200
+
+    NETWORK
+    data_received..................: 11 MB  95 kB/s
+    data_sent......................: 1.3 MB 11 kB/s
+
+running (2m00.1s), 000/200 VUs, 8636 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs 2m0s
+time="2026-02-15T19:40:48Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_failed' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "fastapi-hpa-cpu" deleted from academic namespace
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (14m ago) 31m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (17m ago) 30m
+
+=== Reset terminé ===
+
+=== Test s1/c2/run1 terminé ===
+Résultats: results/s1/c2/run1_20260215_193845.json
+Métriques: results/s1/c2/run1_20260215_193845_metrics.json
+Logs: results/s1/c2/run1_20260215_193845.log
+Pause de 15s avant le prochain test...
+
+> > > > > > > > > > # Test 2/24 : s1/c2/run2 <<<<<<<<<<
+
+# Stratégie: s1 | Scénario: c2 | Run: 2
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (14m ago) 31m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (18m ago) 31m
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+Relance du port-forward...
+Forwarding from 127.0.0.1:8000 -> 8000
+Forwarding from [::1]:8000 -> 8000
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+
+/ \/ \ | |/ / / ‾‾\
+/ \ | ( | (‾) |
+/ ****\_\_**** \ |\_|\_\ \_\_\_\_\_/
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s1/c2/run2_20260215_194155.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m01.0s), 006/200 VUs, 2 complete and 0 interrupted iterations
+inscription_peak [ 1% ] 006/200 VUs 0m01.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m02.0s), 013/200 VUs, 17 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 013/200 VUs 0m02.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m03.0s), 019/200 VUs, 45 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 019/200 VUs 0m03.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m04.0s), 026/200 VUs, 85 complete and 0 interrupted iterations
+inscription_peak [ 3% ] 026/200 VUs 0m04.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m05.0s), 033/200 VUs, 139 complete and 0 interrupted iterations
+inscription_peak [ 4% ] 033/200 VUs 0m05.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m06.0s), 039/200 VUs, 205 complete and 0 interrupted iterations
+inscription_peak [ 5% ] 039/200 VUs 0m06.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m07.0s), 046/200 VUs, 283 complete and 0 interrupted iterations
+inscription_peak [ 6% ] 046/200 VUs 0m07.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m08.0s), 053/200 VUs, 330 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 053/200 VUs 0m08.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m09.0s), 059/200 VUs, 332 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 059/200 VUs 0m09.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m10.0s), 066/200 VUs, 372 complete and 0 interrupted iterations
+inscription_peak [ 8% ] 066/200 VUs 0m10.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m11.0s), 073/200 VUs, 419 complete and 0 interrupted iterations
+inscription_peak [ 9% ] 073/200 VUs 0m11.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m12.0s), 079/200 VUs, 500 complete and 0 interrupted iterations
+inscription_peak [ 10% ] 079/200 VUs 0m12.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m13.0s), 086/200 VUs, 577 complete and 0 interrupted iterations
+inscription_peak [ 11% ] 086/200 VUs 0m13.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m14.0s), 093/200 VUs, 651 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 093/200 VUs 0m14.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m15.0s), 099/200 VUs, 732 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 099/200 VUs 0m15.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m16.0s), 106/200 VUs, 814 complete and 0 interrupted iterations
+inscription_peak [ 13% ] 106/200 VUs 0m16.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m17.0s), 113/200 VUs, 906 complete and 0 interrupted iterations
+inscription_peak [ 14% ] 113/200 VUs 0m17.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m18.0s), 119/200 VUs, 950 complete and 0 interrupted iterations
+inscription_peak [ 15% ] 119/200 VUs 0m18.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m19.0s), 126/200 VUs, 1043 complete and 0 interrupted iterations
+inscription_peak [ 16% ] 126/200 VUs 0m19.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m20.0s), 133/200 VUs, 1119 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 133/200 VUs 0m20.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m21.0s), 139/200 VUs, 1204 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 139/200 VUs 0m21.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m22.0s), 146/200 VUs, 1285 complete and 0 interrupted iterations
+inscription_peak [ 18% ] 146/200 VUs 0m22.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m23.0s), 153/200 VUs, 1360 complete and 0 interrupted iterations
+inscription_peak [ 19% ] 153/200 VUs 0m23.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m24.0s), 159/200 VUs, 1445 complete and 0 interrupted iterations
+inscription_peak [ 20% ] 159/200 VUs 0m24.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m25.0s), 166/200 VUs, 1629 complete and 0 interrupted iterations
+inscription_peak [ 21% ] 166/200 VUs 0m25.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m26.0s), 173/200 VUs, 1711 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 173/200 VUs 0m26.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m27.0s), 179/200 VUs, 1750 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 179/200 VUs 0m27.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m28.0s), 186/200 VUs, 1808 complete and 0 interrupted iterations
+inscription_peak [ 23% ] 186/200 VUs 0m28.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m29.0s), 193/200 VUs, 1955 complete and 0 interrupted iterations
+inscription_peak [ 24% ] 193/200 VUs 0m29.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m30.0s), 199/200 VUs, 2027 complete and 0 interrupted iterations
+inscription_peak [ 25% ] 199/200 VUs 0m30.0s/2m00.0s
+Handling connection for 8000
+
+running (0m31.0s), 200/200 VUs, 2100 complete and 0 interrupted iterations
+inscription_peak [ 26% ] 200/200 VUs 0m31.0s/2m00.0s
+
+running (0m32.0s), 200/200 VUs, 2167 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m32.0s/2m00.0s
+
+running (0m33.0s), 200/200 VUs, 2245 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m33.0s/2m00.0s
+
+running (0m34.0s), 200/200 VUs, 2325 complete and 0 interrupted iterations
+inscription_peak [ 28% ] 200/200 VUs 0m34.0s/2m00.0s
+
+running (0m35.0s), 200/200 VUs, 2401 complete and 0 interrupted iterations
+inscription_peak [ 29% ] 200/200 VUs 0m35.0s/2m00.0s
+
+running (0m36.0s), 200/200 VUs, 2490 complete and 0 interrupted iterations
+inscription_peak [ 30% ] 200/200 VUs 0m36.0s/2m00.0s
+
+running (0m37.0s), 200/200 VUs, 2505 complete and 0 interrupted iterations
+inscription_peak [ 31% ] 200/200 VUs 0m37.0s/2m00.0s
+
+running (0m38.0s), 200/200 VUs, 2576 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m38.0s/2m00.0s
+
+running (0m39.0s), 200/200 VUs, 2667 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m39.0s/2m00.0s
+
+running (0m40.0s), 200/200 VUs, 2734 complete and 0 interrupted iterations
+inscription_peak [ 33% ] 200/200 VUs 0m40.0s/2m00.0s
+
+running (0m41.0s), 200/200 VUs, 2822 complete and 0 interrupted iterations
+inscription_peak [ 34% ] 200/200 VUs 0m41.0s/2m00.0s
+
+running (0m42.0s), 200/200 VUs, 2860 complete and 0 interrupted iterations
+inscription_peak [ 35% ] 200/200 VUs 0m42.0s/2m00.0s
+
+running (0m43.0s), 200/200 VUs, 2950 complete and 0 interrupted iterations
+inscription_peak [ 36% ] 200/200 VUs 0m43.0s/2m00.0s
+
+running (0m44.0s), 200/200 VUs, 3044 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m44.0s/2m00.0s
+
+running (0m45.0s), 200/200 VUs, 3100 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m45.0s/2m00.0s
+
+running (0m46.0s), 200/200 VUs, 3274 complete and 0 interrupted iterations
+inscription_peak [ 38% ] 200/200 VUs 0m46.0s/2m00.0s
+
+running (0m47.0s), 200/200 VUs, 3440 complete and 0 interrupted iterations
+inscription_peak [ 39% ] 200/200 VUs 0m47.0s/2m00.0s
+
+running (0m48.0s), 200/200 VUs, 3537 complete and 0 interrupted iterations
+inscription_peak [ 40% ] 200/200 VUs 0m48.0s/2m00.0s
+
+running (0m49.0s), 200/200 VUs, 3624 complete and 0 interrupted iterations
+inscription_peak [ 41% ] 200/200 VUs 0m49.0s/2m00.0s
+
+running (0m50.0s), 200/200 VUs, 3708 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m50.0s/2m00.0s
+
+running (0m51.0s), 200/200 VUs, 3781 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m51.0s/2m00.0s
+
+running (0m52.0s), 200/200 VUs, 3863 complete and 0 interrupted iterations
+inscription_peak [ 43% ] 200/200 VUs 0m52.0s/2m00.0s
+
+running (0m53.0s), 200/200 VUs, 3971 complete and 0 interrupted iterations
+inscription_peak [ 44% ] 200/200 VUs 0m53.0s/2m00.0s
+
+running (0m54.0s), 200/200 VUs, 4036 complete and 0 interrupted iterations
+inscription_peak [ 45% ] 200/200 VUs 0m54.0s/2m00.0s
+
+running (0m55.0s), 200/200 VUs, 4228 complete and 0 interrupted iterations
+inscription_peak [ 46% ] 200/200 VUs 0m55.0s/2m00.0s
+
+running (0m56.0s), 200/200 VUs, 4310 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m56.0s/2m00.0s
+
+running (0m57.0s), 200/200 VUs, 4396 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m57.0s/2m00.0s
+
+running (0m58.0s), 200/200 VUs, 4484 complete and 0 interrupted iterations
+inscription_peak [ 48% ] 200/200 VUs 0m58.0s/2m00.0s
+
+running (0m59.0s), 200/200 VUs, 4575 complete and 0 interrupted iterations
+inscription_peak [ 49% ] 200/200 VUs 0m59.0s/2m00.0s
+
+running (1m00.0s), 200/200 VUs, 4674 complete and 0 interrupted iterations
+inscription_peak [ 50% ] 200/200 VUs 1m00.0s/2m00.0s
+
+running (1m01.0s), 200/200 VUs, 4761 complete and 0 interrupted iterations
+inscription_peak [ 51% ] 200/200 VUs 1m01.0s/2m00.0s
+
+running (1m02.0s), 200/200 VUs, 4846 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m02.0s/2m00.0s
+
+running (1m03.0s), 200/200 VUs, 4927 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m03.0s/2m00.0s
+
+running (1m04.0s), 200/200 VUs, 5006 complete and 0 interrupted iterations
+inscription_peak [ 53% ] 200/200 VUs 1m04.0s/2m00.0s
+
+running (1m05.0s), 200/200 VUs, 5085 complete and 0 interrupted iterations
+inscription_peak [ 54% ] 200/200 VUs 1m05.0s/2m00.0s
+
+running (1m06.0s), 200/200 VUs, 5153 complete and 0 interrupted iterations
+inscription_peak [ 55% ] 200/200 VUs 1m06.0s/2m00.0s
+
+running (1m07.0s), 200/200 VUs, 5228 complete and 0 interrupted iterations
+inscription_peak [ 56% ] 200/200 VUs 1m07.0s/2m00.0s
+
+running (1m08.0s), 200/200 VUs, 5344 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m08.0s/2m00.0s
+
+running (1m09.0s), 200/200 VUs, 5415 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m09.0s/2m00.0s
+
+running (1m10.0s), 200/200 VUs, 5473 complete and 0 interrupted iterations
+inscription_peak [ 58% ] 200/200 VUs 1m10.0s/2m00.0s
+
+running (1m11.0s), 200/200 VUs, 5551 complete and 0 interrupted iterations
+inscription_peak [ 59% ] 200/200 VUs 1m11.0s/2m00.0s
+
+running (1m12.0s), 200/200 VUs, 5601 complete and 0 interrupted iterations
+inscription_peak [ 60% ] 200/200 VUs 1m12.0s/2m00.0s
+
+running (1m13.0s), 200/200 VUs, 5658 complete and 0 interrupted iterations
+inscription_peak [ 61% ] 200/200 VUs 1m13.0s/2m00.0s
+
+running (1m14.0s), 200/200 VUs, 5750 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m14.0s/2m00.0s
+
+running (1m15.0s), 200/200 VUs, 5890 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m15.0s/2m00.0s
+
+running (1m16.0s), 200/200 VUs, 6011 complete and 0 interrupted iterations
+inscription_peak [ 63% ] 200/200 VUs 1m16.0s/2m00.0s
+
+running (1m17.0s), 200/200 VUs, 6233 complete and 0 interrupted iterations
+inscription_peak [ 64% ] 200/200 VUs 1m17.0s/2m00.0s
+
+running (1m18.0s), 200/200 VUs, 6339 complete and 0 interrupted iterations
+inscription_peak [ 65% ] 200/200 VUs 1m18.0s/2m00.0s
+
+running (1m19.0s), 200/200 VUs, 6425 complete and 0 interrupted iterations
+inscription_peak [ 66% ] 200/200 VUs 1m19.0s/2m00.0s
+
+running (1m20.0s), 200/200 VUs, 6507 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m20.0s/2m00.0s
+
+running (1m21.0s), 200/200 VUs, 6595 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m21.0s/2m00.0s
+
+running (1m22.0s), 200/200 VUs, 6659 complete and 0 interrupted iterations
+inscription_peak [ 68% ] 200/200 VUs 1m22.0s/2m00.0s
+
+running (1m23.0s), 200/200 VUs, 6701 complete and 0 interrupted iterations
+inscription_peak [ 69% ] 200/200 VUs 1m23.0s/2m00.0s
+
+running (1m24.0s), 200/200 VUs, 6792 complete and 0 interrupted iterations
+inscription_peak [ 70% ] 200/200 VUs 1m24.0s/2m00.0s
+
+running (1m25.0s), 200/200 VUs, 6984 complete and 0 interrupted iterations
+inscription_peak [ 71% ] 200/200 VUs 1m25.0s/2m00.0s
+
+running (1m26.0s), 200/200 VUs, 7134 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m26.0s/2m00.0s
+
+running (1m27.0s), 200/200 VUs, 7204 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m27.0s/2m00.0s
+
+running (1m28.0s), 200/200 VUs, 7263 complete and 0 interrupted iterations
+inscription_peak [ 73% ] 200/200 VUs 1m28.0s/2m00.0s
+
+running (1m29.0s), 200/200 VUs, 7341 complete and 0 interrupted iterations
+inscription_peak [ 74% ] 200/200 VUs 1m29.0s/2m00.0s
+
+running (1m30.0s), 200/200 VUs, 7414 complete and 0 interrupted iterations
+inscription_peak [ 75% ] 200/200 VUs 1m30.0s/2m00.0s
+
+running (1m31.0s), 200/200 VUs, 7498 complete and 0 interrupted iterations
+inscription_peak [ 76% ] 200/200 VUs 1m31.0s/2m00.0s
+
+running (1m32.0s), 197/200 VUs, 7578 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 197/200 VUs 1m32.0s/2m00.0s
+
+running (1m33.0s), 188/200 VUs, 7668 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 188/200 VUs 1m33.0s/2m00.0s
+
+running (1m34.0s), 186/200 VUs, 7738 complete and 0 interrupted iterations
+inscription_peak [ 78% ] 186/200 VUs 1m34.0s/2m00.0s
+
+running (1m35.0s), 175/200 VUs, 7822 complete and 0 interrupted iterations
+inscription_peak [ 79% ] 175/200 VUs 1m35.0s/2m00.0s
+
+running (1m36.0s), 169/200 VUs, 7903 complete and 0 interrupted iterations
+inscription_peak [ 80% ] 169/200 VUs 1m36.0s/2m00.0s
+
+running (1m37.0s), 160/200 VUs, 8033 complete and 0 interrupted iterations
+inscription_peak [ 81% ] 160/200 VUs 1m37.0s/2m00.0s
+
+running (1m38.0s), 154/200 VUs, 8101 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 154/200 VUs 1m38.0s/2m00.0s
+
+running (1m39.0s), 149/200 VUs, 8181 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 149/200 VUs 1m39.0s/2m00.0s
+
+running (1m40.0s), 142/200 VUs, 8285 complete and 0 interrupted iterations
+inscription_peak [ 83% ] 142/200 VUs 1m40.0s/2m00.0s
+
+running (1m41.0s), 139/200 VUs, 8350 complete and 0 interrupted iterations
+inscription_peak [ 84% ] 139/200 VUs 1m41.0s/2m00.0s
+
+running (1m42.0s), 130/200 VUs, 8425 complete and 0 interrupted iterations
+inscription_peak [ 85% ] 130/200 VUs 1m42.0s/2m00.0s
+
+running (1m43.0s), 124/200 VUs, 8478 complete and 0 interrupted iterations
+inscription_peak [ 86% ] 124/200 VUs 1m43.0s/2m00.0s
+
+running (1m44.0s), 116/200 VUs, 8570 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 116/200 VUs 1m44.0s/2m00.0s
+
+running (1m45.0s), 104/200 VUs, 8666 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 104/200 VUs 1m45.0s/2m00.0s
+
+running (1m46.0s), 098/200 VUs, 8755 complete and 0 interrupted iterations
+inscription_peak [ 88% ] 098/200 VUs 1m46.0s/2m00.0s
+
+running (1m47.0s), 091/200 VUs, 8884 complete and 0 interrupted iterations
+inscription_peak [ 89% ] 091/200 VUs 1m47.0s/2m00.0s
+
+running (1m48.0s), 085/200 VUs, 8938 complete and 0 interrupted iterations
+inscription_peak [ 90% ] 085/200 VUs 1m48.0s/2m00.0s
+
+running (1m49.0s), 081/200 VUs, 8983 complete and 0 interrupted iterations
+inscription_peak [ 91% ] 081/200 VUs 1m49.0s/2m00.0s
+
+running (1m50.0s), 081/200 VUs, 8984 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 081/200 VUs 1m50.0s/2m00.0s
+
+running (1m51.0s), 071/200 VUs, 9045 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 071/200 VUs 1m51.0s/2m00.0s
+
+running (1m52.0s), 058/200 VUs, 9118 complete and 0 interrupted iterations
+inscription_peak [ 93% ] 058/200 VUs 1m52.0s/2m00.0s
+
+running (1m53.0s), 053/200 VUs, 9153 complete and 0 interrupted iterations
+inscription_peak [ 94% ] 053/200 VUs 1m53.0s/2m00.0s
+
+running (1m54.0s), 051/200 VUs, 9159 complete and 0 interrupted iterations
+inscription_peak [ 95% ] 051/200 VUs 1m54.0s/2m00.0s
+
+running (1m55.0s), 037/200 VUs, 9240 complete and 0 interrupted iterations
+inscription_peak [ 96% ] 037/200 VUs 1m55.0s/2m00.0s
+
+running (1m56.0s), 037/200 VUs, 9240 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 037/200 VUs 1m56.0s/2m00.0s
+
+running (1m57.0s), 035/200 VUs, 9244 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 035/200 VUs 1m57.0s/2m00.0s
+
+running (1m58.0s), 018/200 VUs, 9283 complete and 0 interrupted iterations
+inscription_peak [ 98% ] 018/200 VUs 1m58.0s/2m00.0s
+
+running (1m59.0s), 018/200 VUs, 9284 complete and 0 interrupted iterations
+inscription_peak [ 99% ] 018/200 VUs 1m59.0s/2m00.0s
+
+running (2m00.0s), 003/200 VUs, 9303 complete and 0 interrupted iterations
+inscription_peak [ 100% ] 003/200 VUs 2m00.0s/2m00.0s
+
+█ THRESHOLDS
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=4.29s
+
+    http_req_failed
+    ✗ 'rate<0.05' rate=26.56%
+
+█ TOTAL RESULTS
+
+    checks_total.......: 9306   77.491255/s
+    checks_succeeded...: 73.43% 6834 out of 9306
+    checks_failed......: 26.56% 2472 out of 9306
+
+    ✓ status is 200
+    ✗ created 201
+      ↳  11% — ✓ 332 / ✗ 2472
+
+    HTTP
+    http_req_duration..............: avg=1.45s min=3.5ms    med=1.19s max=12.34s p(90)=3.41s p(95)=4.29s
+      { expected_response:true }...: avg=1.41s min=4.26ms   med=1.1s  max=11.45s p(90)=3.4s  p(95)=4.28s
+    http_req_failed................: 26.56% 2472 out of 9306
+    http_reqs......................: 9306   77.491255/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.95s min=504.02ms med=1.69s max=12.84s p(90)=3.91s p(95)=4.79s
+    iterations.....................: 9306   77.491255/s
+    vus............................: 3      min=3            max=200
+    vus_max........................: 200    min=200          max=200
+
+    NETWORK
+    data_received..................: 12 MB  103 kB/s
+    data_sent......................: 1.4 MB 12 kB/s
+
+running (2m00.1s), 000/200 VUs, 9306 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs 2m0s
+time="2026-02-15T19:43:58Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_failed' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "fastapi-hpa-cpu" deleted from academic namespace
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (17m ago) 34m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (21m ago) 33m
+
+=== Reset terminé ===
+
+=== Test s1/c2/run2 terminé ===
+Résultats: results/s1/c2/run2_20260215_194155.json
+Métriques: results/s1/c2/run2_20260215_194155_metrics.json
+Logs: results/s1/c2/run2_20260215_194155.log
+Pause de 15s avant le prochain test...
+
+> > > > > > > > > > # Test 3/24 : s1/c2/run3 <<<<<<<<<<
+
+# Stratégie: s1 | Scénario: c2 | Run: 3
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (18m ago) 34m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (21m ago) 34m
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+Relance du port-forward...
+Forwarding from 127.0.0.1:8000 -> 8000
+Forwarding from [::1]:8000 -> 8000
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+
+/ \/ \ | |/ / / ‾‾\
+/ \ | ( | (‾) |
+/ ****\_\_**** \ |\_|\_\ \_\_\_\_\_/
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s1/c2/run3_20260215_194506.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m00.9s), 006/200 VUs, 2 complete and 0 interrupted iterations
+inscription_peak [ 1% ] 006/200 VUs 0m00.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m01.9s), 012/200 VUs, 17 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 012/200 VUs 0m01.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m02.9s), 019/200 VUs, 44 complete and 0 interrupted iterations
+inscription_peak [ 2% ] 019/200 VUs 0m02.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m03.9s), 026/200 VUs, 85 complete and 0 interrupted iterations
+inscription_peak [ 3% ] 026/200 VUs 0m03.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m04.9s), 032/200 VUs, 139 complete and 0 interrupted iterations
+inscription_peak [ 4% ] 032/200 VUs 0m04.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m05.9s), 039/200 VUs, 204 complete and 0 interrupted iterations
+inscription_peak [ 5% ] 039/200 VUs 0m05.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m06.9s), 046/200 VUs, 285 complete and 0 interrupted iterations
+inscription_peak [ 6% ] 046/200 VUs 0m06.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m07.9s), 052/200 VUs, 333 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 052/200 VUs 0m07.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m08.9s), 059/200 VUs, 333 complete and 0 interrupted iterations
+inscription_peak [ 7% ] 059/200 VUs 0m08.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m09.9s), 066/200 VUs, 354 complete and 0 interrupted iterations
+inscription_peak [ 8% ] 066/200 VUs 0m09.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m10.9s), 072/200 VUs, 417 complete and 0 interrupted iterations
+inscription_peak [ 9% ] 072/200 VUs 0m10.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m11.9s), 079/200 VUs, 490 complete and 0 interrupted iterations
+inscription_peak [ 10% ] 079/200 VUs 0m11.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m12.9s), 086/200 VUs, 497 complete and 0 interrupted iterations
+inscription_peak [ 11% ] 086/200 VUs 0m12.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m13.9s), 092/200 VUs, 536 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 092/200 VUs 0m13.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m14.9s), 099/200 VUs, 598 complete and 0 interrupted iterations
+inscription_peak [ 12% ] 099/200 VUs 0m14.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m15.9s), 106/200 VUs, 601 complete and 0 interrupted iterations
+inscription_peak [ 13% ] 106/200 VUs 0m15.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m16.9s), 112/200 VUs, 626 complete and 0 interrupted iterations
+inscription_peak [ 14% ] 112/200 VUs 0m16.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m17.9s), 119/200 VUs, 724 complete and 0 interrupted iterations
+inscription_peak [ 15% ] 119/200 VUs 0m17.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m18.9s), 126/200 VUs, 767 complete and 0 interrupted iterations
+inscription_peak [ 16% ] 126/200 VUs 0m18.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m19.9s), 132/200 VUs, 856 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 132/200 VUs 0m19.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m20.9s), 139/200 VUs, 930 complete and 0 interrupted iterations
+inscription_peak [ 17% ] 139/200 VUs 0m20.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m21.9s), 146/200 VUs, 1010 complete and 0 interrupted iterations
+inscription_peak [ 18% ] 146/200 VUs 0m21.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m22.9s), 152/200 VUs, 1068 complete and 0 interrupted iterations
+inscription_peak [ 19% ] 152/200 VUs 0m22.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m23.9s), 159/200 VUs, 1142 complete and 0 interrupted iterations
+inscription_peak [ 20% ] 159/200 VUs 0m23.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m24.9s), 166/200 VUs, 1213 complete and 0 interrupted iterations
+inscription_peak [ 21% ] 166/200 VUs 0m24.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m25.9s), 172/200 VUs, 1297 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 172/200 VUs 0m25.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m26.9s), 179/200 VUs, 1375 complete and 0 interrupted iterations
+inscription_peak [ 22% ] 179/200 VUs 0m26.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m27.9s), 186/200 VUs, 1457 complete and 0 interrupted iterations
+inscription_peak [ 23% ] 186/200 VUs 0m27.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m28.9s), 192/200 VUs, 1566 complete and 0 interrupted iterations
+inscription_peak [ 24% ] 192/200 VUs 0m28.9s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m29.9s), 199/200 VUs, 1650 complete and 0 interrupted iterations
+inscription_peak [ 25% ] 199/200 VUs 0m29.9s/2m00.0s
+Handling connection for 8000
+
+running (0m30.9s), 200/200 VUs, 1698 complete and 0 interrupted iterations
+inscription_peak [ 26% ] 200/200 VUs 0m30.9s/2m00.0s
+
+running (0m31.9s), 200/200 VUs, 1782 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m31.9s/2m00.0s
+
+running (0m32.9s), 200/200 VUs, 1862 complete and 0 interrupted iterations
+inscription_peak [ 27% ] 200/200 VUs 0m32.9s/2m00.0s
+
+running (0m33.9s), 200/200 VUs, 1936 complete and 0 interrupted iterations
+inscription_peak [ 28% ] 200/200 VUs 0m33.9s/2m00.0s
+
+running (0m34.9s), 200/200 VUs, 2013 complete and 0 interrupted iterations
+inscription_peak [ 29% ] 200/200 VUs 0m34.9s/2m00.0s
+
+running (0m35.9s), 200/200 VUs, 2095 complete and 0 interrupted iterations
+inscription_peak [ 30% ] 200/200 VUs 0m35.9s/2m00.0s
+
+running (0m36.9s), 200/200 VUs, 2182 complete and 0 interrupted iterations
+inscription_peak [ 31% ] 200/200 VUs 0m36.9s/2m00.0s
+
+running (0m37.9s), 200/200 VUs, 2263 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m37.9s/2m00.0s
+
+running (0m38.9s), 200/200 VUs, 2349 complete and 0 interrupted iterations
+inscription_peak [ 32% ] 200/200 VUs 0m38.9s/2m00.0s
+
+running (0m39.9s), 200/200 VUs, 2427 complete and 0 interrupted iterations
+inscription_peak [ 33% ] 200/200 VUs 0m39.9s/2m00.0s
+
+running (0m40.9s), 200/200 VUs, 2500 complete and 0 interrupted iterations
+inscription_peak [ 34% ] 200/200 VUs 0m40.9s/2m00.0s
+
+running (0m41.9s), 200/200 VUs, 2580 complete and 0 interrupted iterations
+inscription_peak [ 35% ] 200/200 VUs 0m41.9s/2m00.0s
+
+running (0m42.9s), 200/200 VUs, 2649 complete and 0 interrupted iterations
+inscription_peak [ 36% ] 200/200 VUs 0m42.9s/2m00.0s
+
+running (0m43.9s), 200/200 VUs, 2751 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m43.9s/2m00.0s
+
+running (0m44.9s), 200/200 VUs, 2911 complete and 0 interrupted iterations
+inscription_peak [ 37% ] 200/200 VUs 0m44.9s/2m00.0s
+
+running (0m45.9s), 200/200 VUs, 2957 complete and 0 interrupted iterations
+inscription_peak [ 38% ] 200/200 VUs 0m45.9s/2m00.0s
+
+running (0m46.9s), 200/200 VUs, 3042 complete and 0 interrupted iterations
+inscription_peak [ 39% ] 200/200 VUs 0m46.9s/2m00.0s
+
+running (0m47.9s), 200/200 VUs, 3121 complete and 0 interrupted iterations
+inscription_peak [ 40% ] 200/200 VUs 0m47.9s/2m00.0s
+
+running (0m48.9s), 200/200 VUs, 3122 complete and 0 interrupted iterations
+inscription_peak [ 41% ] 200/200 VUs 0m48.9s/2m00.0s
+
+running (0m49.9s), 200/200 VUs, 3207 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m49.9s/2m00.0s
+
+running (0m50.9s), 200/200 VUs, 3290 complete and 0 interrupted iterations
+inscription_peak [ 42% ] 200/200 VUs 0m50.9s/2m00.0s
+
+running (0m51.9s), 200/200 VUs, 3367 complete and 0 interrupted iterations
+inscription_peak [ 43% ] 200/200 VUs 0m51.9s/2m00.0s
+
+running (0m52.9s), 200/200 VUs, 3447 complete and 0 interrupted iterations
+inscription_peak [ 44% ] 200/200 VUs 0m52.9s/2m00.0s
+
+running (0m53.9s), 200/200 VUs, 3503 complete and 0 interrupted iterations
+inscription_peak [ 45% ] 200/200 VUs 0m53.9s/2m00.0s
+
+running (0m54.9s), 200/200 VUs, 3581 complete and 0 interrupted iterations
+inscription_peak [ 46% ] 200/200 VUs 0m54.9s/2m00.0s
+
+running (0m55.9s), 200/200 VUs, 3661 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m55.9s/2m00.0s
+
+running (0m56.9s), 200/200 VUs, 3746 complete and 0 interrupted iterations
+inscription_peak [ 47% ] 200/200 VUs 0m56.9s/2m00.0s
+
+running (0m57.9s), 200/200 VUs, 3788 complete and 0 interrupted iterations
+inscription_peak [ 48% ] 200/200 VUs 0m57.9s/2m00.0s
+
+running (0m58.9s), 200/200 VUs, 3887 complete and 0 interrupted iterations
+inscription_peak [ 49% ] 200/200 VUs 0m58.9s/2m00.0s
+
+running (0m59.9s), 200/200 VUs, 3966 complete and 0 interrupted iterations
+inscription_peak [ 50% ] 200/200 VUs 0m59.9s/2m00.0s
+
+running (1m00.9s), 200/200 VUs, 4019 complete and 0 interrupted iterations
+inscription_peak [ 51% ] 200/200 VUs 1m00.9s/2m00.0s
+
+running (1m01.9s), 200/200 VUs, 4111 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m01.9s/2m00.0s
+
+running (1m02.9s), 200/200 VUs, 4179 complete and 0 interrupted iterations
+inscription_peak [ 52% ] 200/200 VUs 1m02.9s/2m00.0s
+
+running (1m03.9s), 200/200 VUs, 4245 complete and 0 interrupted iterations
+inscription_peak [ 53% ] 200/200 VUs 1m03.9s/2m00.0s
+
+running (1m04.9s), 200/200 VUs, 4360 complete and 0 interrupted iterations
+inscription_peak [ 54% ] 200/200 VUs 1m04.9s/2m00.0s
+
+running (1m05.9s), 200/200 VUs, 4463 complete and 0 interrupted iterations
+inscription_peak [ 55% ] 200/200 VUs 1m05.9s/2m00.0s
+
+running (1m06.9s), 200/200 VUs, 4541 complete and 0 interrupted iterations
+inscription_peak [ 56% ] 200/200 VUs 1m06.9s/2m00.0s
+
+running (1m07.9s), 200/200 VUs, 4624 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m07.9s/2m00.0s
+
+running (1m08.9s), 200/200 VUs, 4708 complete and 0 interrupted iterations
+inscription_peak [ 57% ] 200/200 VUs 1m08.9s/2m00.0s
+
+running (1m09.9s), 200/200 VUs, 4785 complete and 0 interrupted iterations
+inscription_peak [ 58% ] 200/200 VUs 1m09.9s/2m00.0s
+
+running (1m10.9s), 200/200 VUs, 4852 complete and 0 interrupted iterations
+inscription_peak [ 59% ] 200/200 VUs 1m10.9s/2m00.0s
+
+running (1m11.9s), 200/200 VUs, 4933 complete and 0 interrupted iterations
+inscription_peak [ 60% ] 200/200 VUs 1m11.9s/2m00.0s
+
+running (1m12.9s), 200/200 VUs, 5013 complete and 0 interrupted iterations
+inscription_peak [ 61% ] 200/200 VUs 1m12.9s/2m00.0s
+
+running (1m13.9s), 200/200 VUs, 5131 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m13.9s/2m00.0s
+
+running (1m14.9s), 200/200 VUs, 5298 complete and 0 interrupted iterations
+inscription_peak [ 62% ] 200/200 VUs 1m14.9s/2m00.0s
+
+running (1m15.9s), 200/200 VUs, 5434 complete and 0 interrupted iterations
+inscription_peak [ 63% ] 200/200 VUs 1m15.9s/2m00.0s
+
+running (1m16.9s), 200/200 VUs, 5638 complete and 0 interrupted iterations
+inscription_peak [ 64% ] 200/200 VUs 1m16.9s/2m00.0s
+
+running (1m17.9s), 200/200 VUs, 5716 complete and 0 interrupted iterations
+inscription_peak [ 65% ] 200/200 VUs 1m17.9s/2m00.0s
+
+running (1m18.9s), 200/200 VUs, 5779 complete and 0 interrupted iterations
+inscription_peak [ 66% ] 200/200 VUs 1m18.9s/2m00.0s
+
+running (1m19.9s), 200/200 VUs, 5839 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m19.9s/2m00.0s
+
+running (1m20.9s), 200/200 VUs, 5913 complete and 0 interrupted iterations
+inscription_peak [ 67% ] 200/200 VUs 1m20.9s/2m00.0s
+
+running (1m21.9s), 200/200 VUs, 5988 complete and 0 interrupted iterations
+inscription_peak [ 68% ] 200/200 VUs 1m21.9s/2m00.0s
+
+running (1m22.9s), 200/200 VUs, 6043 complete and 0 interrupted iterations
+inscription_peak [ 69% ] 200/200 VUs 1m22.9s/2m00.0s
+
+running (1m23.9s), 200/200 VUs, 6125 complete and 0 interrupted iterations
+inscription_peak [ 70% ] 200/200 VUs 1m23.9s/2m00.0s
+
+running (1m24.9s), 200/200 VUs, 6206 complete and 0 interrupted iterations
+inscription_peak [ 71% ] 200/200 VUs 1m24.9s/2m00.0s
+
+running (1m25.9s), 200/200 VUs, 6230 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m25.9s/2m00.0s
+
+running (1m26.9s), 200/200 VUs, 6303 complete and 0 interrupted iterations
+inscription_peak [ 72% ] 200/200 VUs 1m26.9s/2m00.0s
+
+running (1m27.9s), 200/200 VUs, 6383 complete and 0 interrupted iterations
+inscription_peak [ 73% ] 200/200 VUs 1m27.9s/2m00.0s
+
+running (1m28.9s), 200/200 VUs, 6470 complete and 0 interrupted iterations
+inscription_peak [ 74% ] 200/200 VUs 1m28.9s/2m00.0s
+
+running (1m29.9s), 200/200 VUs, 6577 complete and 0 interrupted iterations
+inscription_peak [ 75% ] 200/200 VUs 1m29.9s/2m00.0s
+
+running (1m30.9s), 200/200 VUs, 6650 complete and 0 interrupted iterations
+inscription_peak [ 76% ] 200/200 VUs 1m30.9s/2m00.0s
+
+running (1m31.9s), 198/200 VUs, 6737 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 198/200 VUs 1m31.9s/2m00.0s
+
+running (1m32.9s), 188/200 VUs, 6859 complete and 0 interrupted iterations
+inscription_peak [ 77% ] 188/200 VUs 1m32.9s/2m00.0s
+
+running (1m33.9s), 182/200 VUs, 6924 complete and 0 interrupted iterations
+inscription_peak [ 78% ] 182/200 VUs 1m33.9s/2m00.0s
+
+running (1m34.9s), 175/200 VUs, 6998 complete and 0 interrupted iterations
+inscription_peak [ 79% ] 175/200 VUs 1m34.9s/2m00.0s
+
+running (1m35.9s), 170/200 VUs, 7055 complete and 0 interrupted iterations
+inscription_peak [ 80% ] 170/200 VUs 1m35.9s/2m00.0s
+
+running (1m36.9s), 164/200 VUs, 7143 complete and 0 interrupted iterations
+inscription_peak [ 81% ] 164/200 VUs 1m36.9s/2m00.0s
+
+running (1m37.9s), 159/200 VUs, 7220 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 159/200 VUs 1m37.9s/2m00.0s
+
+running (1m38.9s), 153/200 VUs, 7297 complete and 0 interrupted iterations
+inscription_peak [ 82% ] 153/200 VUs 1m38.9s/2m00.0s
+
+running (1m39.9s), 147/200 VUs, 7372 complete and 0 interrupted iterations
+inscription_peak [ 83% ] 147/200 VUs 1m39.9s/2m00.0s
+
+running (1m40.9s), 140/200 VUs, 7449 complete and 0 interrupted iterations
+inscription_peak [ 84% ] 140/200 VUs 1m40.9s/2m00.0s
+
+running (1m41.9s), 130/200 VUs, 7515 complete and 0 interrupted iterations
+inscription_peak [ 85% ] 130/200 VUs 1m41.9s/2m00.0s
+
+running (1m42.9s), 123/200 VUs, 7601 complete and 0 interrupted iterations
+inscription_peak [ 86% ] 123/200 VUs 1m42.9s/2m00.0s
+
+running (1m43.9s), 114/200 VUs, 7701 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 114/200 VUs 1m43.9s/2m00.0s
+
+running (1m44.9s), 107/200 VUs, 7793 complete and 0 interrupted iterations
+inscription_peak [ 87% ] 107/200 VUs 1m44.9s/2m00.0s
+
+running (1m45.9s), 098/200 VUs, 7869 complete and 0 interrupted iterations
+inscription_peak [ 88% ] 098/200 VUs 1m45.9s/2m00.0s
+
+running (1m46.9s), 094/200 VUs, 7917 complete and 0 interrupted iterations
+inscription_peak [ 89% ] 094/200 VUs 1m46.9s/2m00.0s
+
+running (1m47.9s), 083/200 VUs, 8051 complete and 0 interrupted iterations
+inscription_peak [ 90% ] 083/200 VUs 1m47.9s/2m00.0s
+
+running (1m48.9s), 080/200 VUs, 8094 complete and 0 interrupted iterations
+inscription_peak [ 91% ] 080/200 VUs 1m48.9s/2m00.0s
+
+running (1m49.9s), 080/200 VUs, 8095 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 080/200 VUs 1m49.9s/2m00.0s
+
+running (1m50.9s), 071/200 VUs, 8138 complete and 0 interrupted iterations
+inscription_peak [ 92% ] 071/200 VUs 1m50.9s/2m00.0s
+
+running (1m51.9s), 061/200 VUs, 8176 complete and 0 interrupted iterations
+inscription_peak [ 93% ] 061/200 VUs 1m51.9s/2m00.0s
+
+running (1m52.9s), 050/200 VUs, 8239 complete and 0 interrupted iterations
+inscription_peak [ 94% ] 050/200 VUs 1m52.9s/2m00.0s
+
+running (1m53.9s), 042/200 VUs, 8308 complete and 0 interrupted iterations
+inscription_peak [ 95% ] 042/200 VUs 1m53.9s/2m00.0s
+
+running (1m54.9s), 039/200 VUs, 8323 complete and 0 interrupted iterations
+inscription_peak [ 96% ] 039/200 VUs 1m54.9s/2m00.0s
+
+running (1m55.9s), 039/200 VUs, 8323 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 039/200 VUs 1m55.9s/2m00.0s
+
+running (1m56.9s), 023/200 VUs, 8363 complete and 0 interrupted iterations
+inscription_peak [ 97% ] 023/200 VUs 1m56.9s/2m00.0s
+
+running (1m57.9s), 016/200 VUs, 8406 complete and 0 interrupted iterations
+inscription_peak [ 98% ] 016/200 VUs 1m57.9s/2m00.0s
+
+running (1m58.9s), 009/200 VUs, 8436 complete and 0 interrupted iterations
+inscription_peak [ 99% ] 009/200 VUs 1m58.9s/2m00.0s
+
+running (1m59.9s), 003/200 VUs, 8451 complete and 0 interrupted iterations
+inscription_peak [ 100% ] 003/200 VUs 1m59.9s/2m00.0s
+
+█ THRESHOLDS
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=4.77s
+
+    http_req_failed
+    ✗ 'rate<0.05' rate=27.40%
+
+█ TOTAL RESULTS
+
+    checks_total.......: 8454   70.371346/s
+    checks_succeeded...: 72.59% 6137 out of 8454
+    checks_failed......: 27.40% 2317 out of 8454
+
+    ✗ created 201
+      ↳  7% — ✓ 176 / ✗ 2317
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=1.65s min=4.04ms   med=1.5s  max=14.43s p(90)=3.81s p(95)=4.77s
+      { expected_response:true }...: avg=1.61s min=4.9ms    med=1.43s max=14.43s p(90)=3.79s p(95)=4.73s
+    http_req_failed................: 27.40% 2317 out of 8454
+    http_reqs......................: 8454   70.371346/s
+
+    EXECUTION
+    iteration_duration.............: avg=2.15s min=505.04ms med=2s    max=14.93s p(90)=4.32s p(95)=5.27s
+    iterations.....................: 8454   70.371346/s
+    vus............................: 3      min=3            max=200
+    vus_max........................: 200    min=200          max=200
+
+    NETWORK
+    data_received..................: 11 MB  94 kB/s
+    data_sent......................: 1.3 MB 11 kB/s
+
+running (2m00.1s), 000/200 VUs, 8454 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs 2m0s
+time="2026-02-15T19:47:09Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_failed' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "fastapi-hpa-cpu" deleted from academic namespace
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (20m ago) 37m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (24m ago) 36m
+
+=== Reset terminé ===
+
+=== Test s1/c2/run3 terminé ===
+Résultats: results/s1/c2/run3_20260215_194506.json
+Métriques: results/s1/c2/run3_20260215_194506_metrics.json
+Logs: results/s1/c2/run3_20260215_194506.log
+Pause de 15s avant le prochain test...
+
+> > > > > > > > > > # Test 4/24 : s1/c4/run1 <<<<<<<<<<
+
+# Stratégie: s1 | Scénario: c4 | Run: 1
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME READY STATUS RESTARTS AGE
+fastapi-backend-8666df464d-d8qkr 1/1 Running 2 (21m ago) 37m
+fastapi-backend-8666df464d-dsb2v 1/1 Running 1 (24m ago) 37m
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+Relance du port-forward...
+Forwarding from 127.0.0.1:8000 -> 8000
+Forwarding from [::1]:8000 -> 8000
+[3/5] Lancement du test k6 (c4)...
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+
+/ \/ \ | |/ / / ‾‾\
+/ \ | ( | (‾) |
+/ ****\_\_**** \ |\_|\_\ \_\_\_\_\_/
+
+     execution: local
+        script: k6/c4-compute.js
+        output: json (results/s1/c4/run1_20260215_194816.json)
+
+     scenarios: (100.00%) 1 scenario, 100 max VUs, 2m30s max duration (incl. graceful stop):
+              * compute_peak: Up to 100 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m01.0s), 003/100 VUs, 0 complete and 0 interrupted iterations
+compute_peak [ 1% ] 003/100 VUs 0m01.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m02.0s), 006/100 VUs, 0 complete and 0 interrupted iterations
+compute_peak [ 2% ] 006/100 VUs 0m02.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m03.0s), 009/100 VUs, 1 complete and 0 interrupted iterations
+compute_peak [ 2% ] 009/100 VUs 0m03.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m04.0s), 013/100 VUs, 2 complete and 0 interrupted iterations
+compute_peak [ 3% ] 013/100 VUs 0m04.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m05.0s), 016/100 VUs, 2 complete and 0 interrupted iterations
+compute_peak [ 4% ] 016/100 VUs 0m05.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m06.0s), 019/100 VUs, 3 complete and 0 interrupted iterations
+compute_peak [ 5% ] 019/100 VUs 0m06.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m07.0s), 023/100 VUs, 3 complete and 0 interrupted iterations
+compute_peak [ 6% ] 023/100 VUs 0m07.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m08.0s), 026/100 VUs, 3 complete and 0 interrupted iterations
+compute_peak [ 7% ] 026/100 VUs 0m08.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m09.0s), 029/100 VUs, 5 complete and 0 interrupted iterations
+compute_peak [ 7% ] 029/100 VUs 0m09.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m10.0s), 033/100 VUs, 5 complete and 0 interrupted iterations
+compute_peak [ 8% ] 033/100 VUs 0m10.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m11.0s), 036/100 VUs, 5 complete and 0 interrupted iterations
+compute_peak [ 9% ] 036/100 VUs 0m11.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m12.0s), 039/100 VUs, 5 complete and 0 interrupted iterations
+compute_peak [ 10% ] 039/100 VUs 0m12.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m13.0s), 043/100 VUs, 7 complete and 0 interrupted iterations
+compute_peak [ 11% ] 043/100 VUs 0m13.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m14.0s), 046/100 VUs, 7 complete and 0 interrupted iterations
+compute_peak [ 12% ] 046/100 VUs 0m14.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m15.0s), 049/100 VUs, 7 complete and 0 interrupted iterations
+compute_peak [ 12% ] 049/100 VUs 0m15.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m16.0s), 053/100 VUs, 7 complete and 0 interrupted iterations
+compute_peak [ 13% ] 053/100 VUs 0m16.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m17.0s), 056/100 VUs, 7 complete and 0 interrupted iterations
+compute_peak [ 14% ] 056/100 VUs 0m17.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m18.0s), 059/100 VUs, 10 complete and 0 interrupted iterations
+compute_peak [ 15% ] 059/100 VUs 0m18.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m19.0s), 063/100 VUs, 10 complete and 0 interrupted iterations
+compute_peak [ 16% ] 063/100 VUs 0m19.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m20.0s), 066/100 VUs, 10 complete and 0 interrupted iterations
+compute_peak [ 17% ] 066/100 VUs 0m20.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m21.0s), 069/100 VUs, 10 complete and 0 interrupted iterations
+compute_peak [ 17% ] 069/100 VUs 0m21.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m22.0s), 073/100 VUs, 10 complete and 0 interrupted iterations
+compute_peak [ 18% ] 073/100 VUs 0m22.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m23.0s), 076/100 VUs, 13 complete and 0 interrupted iterations
+compute_peak [ 19% ] 076/100 VUs 0m23.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m24.0s), 079/100 VUs, 13 complete and 0 interrupted iterations
+compute_peak [ 20% ] 079/100 VUs 0m24.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m25.0s), 083/100 VUs, 13 complete and 0 interrupted iterations
+compute_peak [ 21% ] 083/100 VUs 0m25.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m26.0s), 086/100 VUs, 13 complete and 0 interrupted iterations
+compute_peak [ 22% ] 086/100 VUs 0m26.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m27.0s), 089/100 VUs, 13 complete and 0 interrupted iterations
+compute_peak [ 22% ] 089/100 VUs 0m27.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m28.0s), 093/100 VUs, 16 complete and 0 interrupted iterations
+compute_peak [ 23% ] 093/100 VUs 0m28.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m29.0s), 096/100 VUs, 16 complete and 0 interrupted iterations
+compute_peak [ 24% ] 096/100 VUs 0m29.0s/2m00.0s
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+running (0m30.0s), 099/100 VUs, 16 complete and 0 interrupted iterations
+compute_peak [ 25% ] 099/100 VUs 0m30.0s/2m00.0s
+Handling connection for 8000
+
+running (0m31.0s), 100/100 VUs, 16 complete and 0 interrupted iterations
+compute_peak [ 26% ] 100/100 VUs 0m31.0s/2m00.0s
+
+running (0m32.0s), 100/100 VUs, 16 complete and 0 interrupted iterations
+compute_peak [ 27% ] 100/100 VUs 0m32.0s/2m00.0s
+
+running (0m33.0s), 100/100 VUs, 20 complete and 0 interrupted iterations
+compute_peak [ 27% ] 100/100 VUs 0m33.0s/2m00.0s
+
+running (0m34.0s), 100/100 VUs, 20 complete and 0 interrupted iterations
+compute_peak [ 28% ] 100/100 VUs 0m34.0s/2m00.0s
+
+running (0m35.0s), 100/100 VUs, 20 complete and 0 interrupted iterations
+compute_peak [ 29% ] 100/100 VUs 0m35.0s/2m00.0s
+
+running (0m36.0s), 100/100 VUs, 20 complete and 0 interrupted iterations
+compute_peak [ 30% ] 100/100 VUs 0m36.0s/2m00.0s
+
+running (0m37.0s), 100/100 VUs, 20 complete and 0 interrupted iterations
+compute_peak [ 31% ] 100/100 VUs 0m37.0s/2m00.0s
+
+running (0m38.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 32% ] 100/100 VUs 0m38.0s/2m00.0s
+
+running (0m39.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 32% ] 100/100 VUs 0m39.0s/2m00.0s
+
+running (0m40.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 33% ] 100/100 VUs 0m40.0s/2m00.0s
+
+running (0m41.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 34% ] 100/100 VUs 0m41.0s/2m00.0s
+
+running (0m42.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 35% ] 100/100 VUs 0m42.0s/2m00.0s
+
+running (0m43.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 36% ] 100/100 VUs 0m43.0s/2m00.0s
+
+running (0m44.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 37% ] 100/100 VUs 0m44.0s/2m00.0s
+
+running (0m45.0s), 100/100 VUs, 24 complete and 0 interrupted iterations
+compute_peak [ 37% ] 100/100 VUs 0m45.0s/2m00.0s
+
+running (0m46.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 38% ] 100/100 VUs 0m46.0s/2m00.0s
+
+running (0m47.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 39% ] 100/100 VUs 0m47.0s/2m00.0s
+
+running (0m48.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 40% ] 100/100 VUs 0m48.0s/2m00.0s
+
+running (0m49.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 41% ] 100/100 VUs 0m49.0s/2m00.0s
+
+running (0m50.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 42% ] 100/100 VUs 0m50.0s/2m00.0s
+
+running (0m51.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 42% ] 100/100 VUs 0m51.0s/2m00.0s
+
+running (0m52.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 43% ] 100/100 VUs 0m52.0s/2m00.0s
+
+running (0m53.0s), 100/100 VUs, 29 complete and 0 interrupted iterations
+compute_peak [ 44% ] 100/100 VUs 0m53.0s/2m00.0s
+
+running (0m54.0s), 100/100 VUs, 34 complete and 0 interrupted iterations
+compute_peak [ 45% ] 100/100 VUs 0m54.0s/2m00.0s
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": EOF"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:11Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+
+running (0m55.0s), 100/100 VUs, 134 complete and 0 interrupted iterations
+compute_peak [ 46% ] 100/100 VUs 0m55.0s/2m00.0s
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:12Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+
+running (0m56.0s), 100/100 VUs, 334 complete and 0 interrupted iterations
+compute_peak [ 47% ] 100/100 VUs 0m56.0s/2m00.0s
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:13Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+
+running (0m57.0s), 100/100 VUs, 534 complete and 0 interrupted iterations
+compute_peak [ 47% ] 100/100 VUs 0m57.0s/2m00.0s
+time="2026-02-15T19:49:14Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T19:49:14Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/compute/?iterations=1000000\": dial tcp 127.0.0.1:8000: connect: connection refused"

@@ -1,0 +1,568 @@
+==============================================
+ Lancement de 24 tests
+ Durée estimée: ~33 minutes
+ Début: Sun Feb 15 05:39:16 PM GMT 2026
+==============================================
+
+>>>>>>>>>> Test 1/24 : s1/c2/run1 <<<<<<<<<<
+==============================================
+ Stratégie: s1 | Scénario: c2 | Run: 1
+==============================================
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-2rpms   1/1     Running   0          11h
+fastapi-backend-8666df464d-8nhv4   1/1     Running   0          11h
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s1/c2/run1_20260215_173946.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+running (0m01.0s), 006/200 VUs, 3 complete and 0 interrupted iterations
+inscription_peak   [   1% ] 006/200 VUs  0m01.0s/2m00.0s
+
+running (0m02.0s), 013/200 VUs, 18 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 013/200 VUs  0m02.0s/2m00.0s
+
+running (0m03.0s), 019/200 VUs, 46 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 019/200 VUs  0m03.0s/2m00.0s
+
+running (0m04.0s), 026/200 VUs, 88 complete and 0 interrupted iterations
+inscription_peak   [   3% ] 026/200 VUs  0m04.0s/2m00.0s
+
+running (0m05.0s), 033/200 VUs, 141 complete and 0 interrupted iterations
+inscription_peak   [   4% ] 033/200 VUs  0m05.0s/2m00.0s
+
+running (0m06.0s), 039/200 VUs, 209 complete and 0 interrupted iterations
+inscription_peak   [   5% ] 039/200 VUs  0m06.0s/2m00.0s
+
+running (0m07.0s), 046/200 VUs, 290 complete and 0 interrupted iterations
+inscription_peak   [   6% ] 046/200 VUs  0m07.0s/2m00.0s
+
+running (0m08.0s), 053/200 VUs, 376 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 053/200 VUs  0m08.0s/2m00.0s
+
+running (0m09.0s), 059/200 VUs, 438 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 059/200 VUs  0m09.0s/2m00.0s
+
+running (0m10.0s), 066/200 VUs, 449 complete and 0 interrupted iterations
+inscription_peak   [   8% ] 066/200 VUs  0m10.0s/2m00.0s
+
+running (0m11.0s), 073/200 VUs, 528 complete and 0 interrupted iterations
+inscription_peak   [   9% ] 073/200 VUs  0m11.0s/2m00.0s
+
+running (0m12.0s), 079/200 VUs, 590 complete and 0 interrupted iterations
+inscription_peak   [  10% ] 079/200 VUs  0m12.0s/2m00.0s
+
+running (0m13.0s), 086/200 VUs, 611 complete and 0 interrupted iterations
+inscription_peak   [  11% ] 086/200 VUs  0m13.0s/2m00.0s
+
+running (0m14.0s), 093/200 VUs, 707 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 093/200 VUs  0m14.0s/2m00.0s
+
+running (0m15.0s), 099/200 VUs, 786 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 099/200 VUs  0m15.0s/2m00.0s
+
+running (0m16.0s), 106/200 VUs, 814 complete and 0 interrupted iterations
+inscription_peak   [  13% ] 106/200 VUs  0m16.0s/2m00.0s
+
+running (0m17.0s), 113/200 VUs, 935 complete and 0 interrupted iterations
+inscription_peak   [  14% ] 113/200 VUs  0m17.0s/2m00.0s
+
+running (0m18.0s), 119/200 VUs, 1010 complete and 0 interrupted iterations
+inscription_peak   [  15% ] 119/200 VUs  0m18.0s/2m00.0s
+
+running (0m19.0s), 126/200 VUs, 1067 complete and 0 interrupted iterations
+inscription_peak   [  16% ] 126/200 VUs  0m19.0s/2m00.0s
+
+running (0m20.0s), 133/200 VUs, 1206 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 133/200 VUs  0m20.0s/2m00.0s
+
+running (0m21.0s), 139/200 VUs, 1357 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 139/200 VUs  0m21.0s/2m00.0s
+
+running (0m22.0s), 146/200 VUs, 1361 complete and 0 interrupted iterations
+inscription_peak   [  18% ] 146/200 VUs  0m22.0s/2m00.0s
+
+running (0m23.0s), 153/200 VUs, 1529 complete and 0 interrupted iterations
+inscription_peak   [  19% ] 153/200 VUs  0m23.0s/2m00.0s
+
+running (0m24.0s), 159/200 VUs, 1681 complete and 0 interrupted iterations
+inscription_peak   [  20% ] 159/200 VUs  0m24.0s/2m00.0s
+
+running (0m25.0s), 166/200 VUs, 1821 complete and 0 interrupted iterations
+inscription_peak   [  21% ] 166/200 VUs  0m25.0s/2m00.0s
+
+running (0m26.0s), 173/200 VUs, 2013 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 173/200 VUs  0m26.0s/2m00.0s
+
+running (0m27.0s), 179/200 VUs, 2209 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 179/200 VUs  0m27.0s/2m00.0s
+
+running (0m28.0s), 186/200 VUs, 2363 complete and 0 interrupted iterations
+inscription_peak   [  23% ] 186/200 VUs  0m28.0s/2m00.0s
+
+running (0m29.0s), 193/200 VUs, 2555 complete and 0 interrupted iterations
+inscription_peak   [  24% ] 193/200 VUs  0m29.0s/2m00.0s
+
+running (0m30.0s), 199/200 VUs, 2735 complete and 0 interrupted iterations
+inscription_peak   [  25% ] 199/200 VUs  0m30.0s/2m00.0s
+
+running (0m31.0s), 200/200 VUs, 2895 complete and 0 interrupted iterations
+inscription_peak   [  26% ] 200/200 VUs  0m31.0s/2m00.0s
+
+running (0m32.0s), 200/200 VUs, 3047 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m32.0s/2m00.0s
+
+running (0m33.0s), 200/200 VUs, 3228 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m33.0s/2m00.0s
+
+running (0m34.0s), 200/200 VUs, 3424 complete and 0 interrupted iterations
+inscription_peak   [  28% ] 200/200 VUs  0m34.0s/2m00.0s
+
+running (0m35.0s), 200/200 VUs, 3590 complete and 0 interrupted iterations
+inscription_peak   [  29% ] 200/200 VUs  0m35.0s/2m00.0s
+
+running (0m36.0s), 200/200 VUs, 3756 complete and 0 interrupted iterations
+inscription_peak   [  30% ] 200/200 VUs  0m36.0s/2m00.0s
+
+running (0m37.0s), 200/200 VUs, 3918 complete and 0 interrupted iterations
+inscription_peak   [  31% ] 200/200 VUs  0m37.0s/2m00.0s
+
+running (0m38.0s), 200/200 VUs, 4082 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m38.0s/2m00.0s
+
+running (0m39.0s), 200/200 VUs, 4228 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m39.0s/2m00.0s
+
+running (0m40.0s), 200/200 VUs, 4424 complete and 0 interrupted iterations
+inscription_peak   [  33% ] 200/200 VUs  0m40.0s/2m00.0s
+
+running (0m41.0s), 200/200 VUs, 4555 complete and 0 interrupted iterations
+inscription_peak   [  34% ] 200/200 VUs  0m41.0s/2m00.0s
+
+running (0m42.0s), 200/200 VUs, 4717 complete and 0 interrupted iterations
+inscription_peak   [  35% ] 200/200 VUs  0m42.0s/2m00.0s
+
+running (0m43.0s), 200/200 VUs, 4867 complete and 0 interrupted iterations
+inscription_peak   [  36% ] 200/200 VUs  0m43.0s/2m00.0s
+
+running (0m44.0s), 200/200 VUs, 5050 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m44.0s/2m00.0s
+
+running (0m45.0s), 200/200 VUs, 5187 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m45.0s/2m00.0s
+
+running (0m46.0s), 200/200 VUs, 5330 complete and 0 interrupted iterations
+inscription_peak   [  38% ] 200/200 VUs  0m46.0s/2m00.0s
+
+running (0m47.0s), 200/200 VUs, 5504 complete and 0 interrupted iterations
+inscription_peak   [  39% ] 200/200 VUs  0m47.0s/2m00.0s
+
+running (0m48.0s), 200/200 VUs, 5705 complete and 0 interrupted iterations
+inscription_peak   [  40% ] 200/200 VUs  0m48.0s/2m00.0s
+
+running (0m49.0s), 200/200 VUs, 5912 complete and 0 interrupted iterations
+inscription_peak   [  41% ] 200/200 VUs  0m49.0s/2m00.0s
+
+running (0m50.0s), 200/200 VUs, 6075 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m50.0s/2m00.0s
+
+running (0m51.0s), 200/200 VUs, 6256 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m51.0s/2m00.0s
+
+running (0m52.0s), 200/200 VUs, 6455 complete and 0 interrupted iterations
+inscription_peak   [  43% ] 200/200 VUs  0m52.0s/2m00.0s
+
+running (0m53.0s), 200/200 VUs, 6627 complete and 0 interrupted iterations
+inscription_peak   [  44% ] 200/200 VUs  0m53.0s/2m00.0s
+
+running (0m54.0s), 200/200 VUs, 6783 complete and 0 interrupted iterations
+inscription_peak   [  45% ] 200/200 VUs  0m54.0s/2m00.0s
+
+running (0m55.0s), 200/200 VUs, 6942 complete and 0 interrupted iterations
+inscription_peak   [  46% ] 200/200 VUs  0m55.0s/2m00.0s
+
+running (0m56.0s), 200/200 VUs, 7140 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m56.0s/2m00.0s
+
+running (0m57.0s), 200/200 VUs, 7355 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m57.0s/2m00.0s
+
+running (0m58.0s), 200/200 VUs, 7502 complete and 0 interrupted iterations
+inscription_peak   [  48% ] 200/200 VUs  0m58.0s/2m00.0s
+
+running (0m59.0s), 200/200 VUs, 7700 complete and 0 interrupted iterations
+inscription_peak   [  49% ] 200/200 VUs  0m59.0s/2m00.0s
+
+running (1m00.0s), 200/200 VUs, 7857 complete and 0 interrupted iterations
+inscription_peak   [  50% ] 200/200 VUs  1m00.0s/2m00.0s
+
+running (1m01.0s), 200/200 VUs, 8062 complete and 0 interrupted iterations
+inscription_peak   [  51% ] 200/200 VUs  1m01.0s/2m00.0s
+
+running (1m02.0s), 200/200 VUs, 8220 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m02.0s/2m00.0s
+
+running (1m03.0s), 200/200 VUs, 8399 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m03.0s/2m00.0s
+
+running (1m04.0s), 200/200 VUs, 8553 complete and 0 interrupted iterations
+inscription_peak   [  53% ] 200/200 VUs  1m04.0s/2m00.0s
+
+running (1m05.0s), 200/200 VUs, 8782 complete and 0 interrupted iterations
+inscription_peak   [  54% ] 200/200 VUs  1m05.0s/2m00.0s
+
+running (1m06.0s), 200/200 VUs, 8976 complete and 0 interrupted iterations
+inscription_peak   [  55% ] 200/200 VUs  1m06.0s/2m00.0s
+
+running (1m07.0s), 200/200 VUs, 9140 complete and 0 interrupted iterations
+inscription_peak   [  56% ] 200/200 VUs  1m07.0s/2m00.0s
+
+running (1m08.0s), 200/200 VUs, 9338 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m08.0s/2m00.0s
+
+running (1m09.0s), 200/200 VUs, 9547 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m09.0s/2m00.0s
+
+running (1m10.0s), 200/200 VUs, 9730 complete and 0 interrupted iterations
+inscription_peak   [  58% ] 200/200 VUs  1m10.0s/2m00.0s
+
+running (1m11.0s), 200/200 VUs, 9892 complete and 0 interrupted iterations
+inscription_peak   [  59% ] 200/200 VUs  1m11.0s/2m00.0s
+
+running (1m12.0s), 200/200 VUs, 10072 complete and 0 interrupted iterations
+inscription_peak   [  60% ] 200/200 VUs  1m12.0s/2m00.0s
+
+running (1m13.0s), 200/200 VUs, 10284 complete and 0 interrupted iterations
+inscription_peak   [  61% ] 200/200 VUs  1m13.0s/2m00.0s
+
+running (1m14.0s), 200/200 VUs, 10396 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m14.0s/2m00.0s
+
+running (1m15.0s), 200/200 VUs, 10535 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m15.0s/2m00.0s
+
+running (1m16.0s), 200/200 VUs, 10715 complete and 0 interrupted iterations
+inscription_peak   [  63% ] 200/200 VUs  1m16.0s/2m00.0s
+
+running (1m17.0s), 200/200 VUs, 10931 complete and 0 interrupted iterations
+inscription_peak   [  64% ] 200/200 VUs  1m17.0s/2m00.0s
+
+running (1m18.0s), 200/200 VUs, 11142 complete and 0 interrupted iterations
+inscription_peak   [  65% ] 200/200 VUs  1m18.0s/2m00.0s
+
+running (1m19.0s), 200/200 VUs, 11354 complete and 0 interrupted iterations
+inscription_peak   [  66% ] 200/200 VUs  1m19.0s/2m00.0s
+
+running (1m20.0s), 200/200 VUs, 11548 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m20.0s/2m00.0s
+
+running (1m21.0s), 200/200 VUs, 11713 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m21.0s/2m00.0s
+
+running (1m22.0s), 200/200 VUs, 11893 complete and 0 interrupted iterations
+inscription_peak   [  68% ] 200/200 VUs  1m22.0s/2m00.0s
+
+running (1m23.0s), 200/200 VUs, 12055 complete and 0 interrupted iterations
+inscription_peak   [  69% ] 200/200 VUs  1m23.0s/2m00.0s
+
+running (1m24.0s), 200/200 VUs, 12233 complete and 0 interrupted iterations
+inscription_peak   [  70% ] 200/200 VUs  1m24.0s/2m00.0s
+
+running (1m25.0s), 200/200 VUs, 12366 complete and 0 interrupted iterations
+inscription_peak   [  71% ] 200/200 VUs  1m25.0s/2m00.0s
+
+running (1m26.0s), 200/200 VUs, 12522 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m26.0s/2m00.0s
+
+running (1m27.0s), 200/200 VUs, 12664 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m27.0s/2m00.0s
+
+running (1m28.0s), 200/200 VUs, 12839 complete and 0 interrupted iterations
+inscription_peak   [  73% ] 200/200 VUs  1m28.0s/2m00.0s
+
+running (1m29.0s), 200/200 VUs, 13000 complete and 0 interrupted iterations
+inscription_peak   [  74% ] 200/200 VUs  1m29.0s/2m00.0s
+
+running (1m30.0s), 200/200 VUs, 13205 complete and 0 interrupted iterations
+inscription_peak   [  75% ] 200/200 VUs  1m30.0s/2m00.0s
+
+running (1m31.0s), 197/200 VUs, 13383 complete and 0 interrupted iterations
+inscription_peak   [  76% ] 197/200 VUs  1m31.0s/2m00.0s
+
+running (1m32.0s), 190/200 VUs, 13602 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 190/200 VUs  1m32.0s/2m00.0s
+
+running (1m33.0s), 185/200 VUs, 13769 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 185/200 VUs  1m33.0s/2m00.0s
+
+running (1m34.0s), 176/200 VUs, 13996 complete and 0 interrupted iterations
+inscription_peak   [  78% ] 176/200 VUs  1m34.0s/2m00.0s
+
+running (1m35.0s), 169/200 VUs, 14208 complete and 0 interrupted iterations
+inscription_peak   [  79% ] 169/200 VUs  1m35.0s/2m00.0s
+
+running (1m36.0s), 165/200 VUs, 14392 complete and 0 interrupted iterations
+inscription_peak   [  80% ] 165/200 VUs  1m36.0s/2m00.0s
+
+running (1m37.0s), 156/200 VUs, 14586 complete and 0 interrupted iterations
+inscription_peak   [  81% ] 156/200 VUs  1m37.0s/2m00.0s
+
+running (1m38.0s), 148/200 VUs, 14812 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 148/200 VUs  1m38.0s/2m00.0s
+
+running (1m39.0s), 144/200 VUs, 14944 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 144/200 VUs  1m39.0s/2m00.0s
+
+running (1m40.0s), 138/200 VUs, 15063 complete and 0 interrupted iterations
+inscription_peak   [  83% ] 138/200 VUs  1m40.0s/2m00.0s
+
+running (1m41.0s), 132/200 VUs, 15193 complete and 0 interrupted iterations
+inscription_peak   [  84% ] 132/200 VUs  1m41.0s/2m00.0s
+
+running (1m42.0s), 123/200 VUs, 15332 complete and 0 interrupted iterations
+inscription_peak   [  85% ] 123/200 VUs  1m42.0s/2m00.0s
+
+running (1m43.0s), 116/200 VUs, 15432 complete and 0 interrupted iterations
+inscription_peak   [  86% ] 116/200 VUs  1m43.0s/2m00.0s
+
+running (1m44.0s), 113/200 VUs, 15483 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 113/200 VUs  1m44.0s/2m00.0s
+
+running (1m45.0s), 106/200 VUs, 15589 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 106/200 VUs  1m45.0s/2m00.0s
+
+running (1m46.0s), 097/200 VUs, 15700 complete and 0 interrupted iterations
+inscription_peak   [  88% ] 097/200 VUs  1m46.0s/2m00.0s
+
+running (1m47.0s), 096/200 VUs, 15723 complete and 0 interrupted iterations
+inscription_peak   [  89% ] 096/200 VUs  1m47.0s/2m00.0s
+
+running (1m48.0s), 085/200 VUs, 15827 complete and 0 interrupted iterations
+inscription_peak   [  90% ] 085/200 VUs  1m48.0s/2m00.0s
+
+running (1m49.0s), 076/200 VUs, 15922 complete and 0 interrupted iterations
+inscription_peak   [  91% ] 076/200 VUs  1m49.0s/2m00.0s
+
+running (1m50.0s), 070/200 VUs, 16001 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 070/200 VUs  1m50.0s/2m00.0s
+
+running (1m51.0s), 065/200 VUs, 16040 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 065/200 VUs  1m51.0s/2m00.0s
+
+running (1m52.0s), 058/200 VUs, 16094 complete and 0 interrupted iterations
+inscription_peak   [  93% ] 058/200 VUs  1m52.0s/2m00.0s
+
+running (1m53.0s), 049/200 VUs, 16152 complete and 0 interrupted iterations
+inscription_peak   [  94% ] 049/200 VUs  1m53.0s/2m00.0s
+
+running (1m54.0s), 041/200 VUs, 16217 complete and 0 interrupted iterations
+inscription_peak   [  95% ] 041/200 VUs  1m54.0s/2m00.0s
+
+running (1m55.0s), 040/200 VUs, 16225 complete and 0 interrupted iterations
+inscription_peak   [  96% ] 040/200 VUs  1m55.0s/2m00.0s
+
+running (1m56.0s), 032/200 VUs, 16273 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 032/200 VUs  1m56.0s/2m00.0s
+
+running (1m57.0s), 024/200 VUs, 16308 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 024/200 VUs  1m57.0s/2m00.0s
+
+running (1m58.0s), 016/200 VUs, 16337 complete and 0 interrupted iterations
+inscription_peak   [  98% ] 016/200 VUs  1m58.0s/2m00.0s
+
+running (1m59.0s), 008/200 VUs, 16365 complete and 0 interrupted iterations
+inscription_peak   [  99% ] 008/200 VUs  1m59.0s/2m00.0s
+
+running (2m00.0s), 002/200 VUs, 16378 complete and 0 interrupted iterations
+inscription_peak   [ 100% ] 002/200 VUs  2m00.0s/2m00.0s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<2000' p(95)=1.63s
+
+    http_req_failed
+    ✓ 'rate<0.05' rate=0.23%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 16380  136.083557/s
+    checks_succeeded...: 99.76% 16341 out of 16380
+    checks_failed......: 0.23%  39 out of 16380
+
+    ✗ created 201
+      ↳  99% — ✓ 4867 / ✗ 39
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=604.59ms min=2.14ms   med=505.49ms max=6.39s p(90)=1.24s p(95)=1.63s
+      { expected_response:true }...: avg=605.61ms min=2.14ms   med=505.98ms max=6.39s p(90)=1.24s p(95)=1.64s
+    http_req_failed................: 0.23%  39 out of 16380
+    http_reqs......................: 16380  136.083557/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.1s     min=502.61ms med=1s       max=6.89s p(90)=1.74s p(95)=2.14s
+    iterations.....................: 16380  136.083557/s
+    vus............................: 2      min=2           max=200
+    vus_max........................: 200    min=200         max=200
+
+    NETWORK
+    data_received..................: 22 MB  185 kB/s
+    data_sent......................: 2.5 MB 21 kB/s
+
+
+
+
+running (2m00.4s), 000/200 VUs, 16380 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs  2m0s
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "fastapi-hpa-cpu" deleted from academic namespace
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-47qs7   1/1     Running   0          92s
+fastapi-backend-8666df464d-shlsw   1/1     Running   0          62s
+
+=== Reset terminé ===
+
+=== Test s1/c2/run1 terminé ===
+Résultats: results/s1/c2/run1_20260215_173946.json
+Métriques: results/s1/c2/run1_20260215_173946_metrics.json
+Logs:      results/s1/c2/run1_20260215_173946.log
+Pause de 15s avant le prochain test...
+
+>>>>>>>>>> Test 2/24 : s1/c2/run2 <<<<<<<<<<
+==============================================
+ Stratégie: s1 | Scénario: c2 | Run: 2
+==============================================
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+deployment.apps/fastapi-backend scaled
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-47qs7   1/1     Running   0          2m2s
+fastapi-backend-8666df464d-shlsw   1/1     Running   0          92s
+
+=== Reset terminé ===
+[2/5] Application de la stratégie s1...
+horizontalpodautoscaler.autoscaling/fastapi-hpa-cpu created
+Attente activation autoscaler (15s)...
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s1/c2/run2_20260215_174248.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+time="2026-02-15T17:42:48Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": EOF"
+time="2026-02-15T17:42:48Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+
+running (0m01.0s), 006/200 VUs, 3 complete and 0 interrupted iterations
+inscription_peak   [   1% ] 006/200 VUs  0m01.0s/2m00.0s
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:49Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+
+running (0m02.0s), 013/200 VUs, 18 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 013/200 VUs  0m02.0s/2m00.0s
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:50Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Post \"http://localhost:8000/api/v1/students/\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"
+time="2026-02-15T17:42:51Z" level=warning msg="Request Failed" error="Get \"http://localhost:8000/api/v1/students/?page=1&per_page=10\": dial tcp 127.0.0.1:8000: connect: connection refused"

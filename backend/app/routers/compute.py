@@ -6,7 +6,7 @@ router = APIRouter(prefix="/api/v1/compute", tags=["Compute"])
 
 
 @router.get("/")
-async def compute_intensive(
+def compute_intensive(
     iterations: int = Query(1_000_000, ge=1, le=10_000_000, description="Nombre d'itérations"),
 ):
     result = 0.0
