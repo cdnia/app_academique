@@ -6,7 +6,7 @@ metadata:
 spec:
   scaleTargetRef:
     name: fastapi-backend
-  minReplicaCount: 0
+  minReplicaCount: 1
   maxReplicaCount: 10
   pollingInterval: 15
   cooldownPeriod: 60

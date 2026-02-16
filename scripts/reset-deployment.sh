@@ -10,8 +10,8 @@ echo "=== Reset replicas ==="
 kubectl scale deployment fastapi-backend --replicas=2 -n $NAMESPACE
 
 echo "=== Nettoyage table students (hors données initiales) ==="
-kubectl exec -n $NAMESPACE deploy/postgresql -- \
-  psql -U postgres -d academic_db -c "DELETE FROM grades WHERE student_id > 3; DELETE FROM students WHERE id > 3;" 2>/dev/null
+kubectl exec -n $NAMESPACE postgresql-0 -- \
+  psql -U postgres -d academic_db -c "DELETE FROM grades WHERE student_id > 3; DELETE FROM students WHERE id > 3;"
 
 echo "=== Attente stabilisation (15s) ==="
 sleep 15
