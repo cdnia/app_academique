@@ -1,0 +1,1393 @@
+
+>>>>>>>>>> Test 1/3 : s7/c2/run1 <<<<<<<<<<
+
+# Stratégie: s7 | Scénario: c2 | Run: 1
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 0
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          67m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          70m
+=== Reset terminé ===
+[2/5] Application de la stratégie s7...
+scaledobject.keda.sh/fastapi-keda created
+Attente activation autoscaler (15s)...
+Vérification connectivité NodePort...
+NodePort OK
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s7/c2/run1_20260216_072231.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+running (0m01.0s), 006/200 VUs, 3 complete and 0 interrupted iterations
+inscription_peak   [   1% ] 006/200 VUs  0m01.0s/2m00.0s
+
+running (0m02.0s), 013/200 VUs, 12 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 013/200 VUs  0m02.0s/2m00.0s
+
+running (0m03.0s), 019/200 VUs, 31 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 019/200 VUs  0m03.0s/2m00.0s
+
+running (0m04.0s), 026/200 VUs, 73 complete and 0 interrupted iterations
+inscription_peak   [   3% ] 026/200 VUs  0m04.0s/2m00.0s
+
+running (0m05.0s), 033/200 VUs, 126 complete and 0 interrupted iterations
+inscription_peak   [   4% ] 033/200 VUs  0m05.0s/2m00.0s
+
+running (0m06.0s), 039/200 VUs, 153 complete and 0 interrupted iterations
+inscription_peak   [   5% ] 039/200 VUs  0m06.0s/2m00.0s
+
+running (0m07.0s), 046/200 VUs, 185 complete and 0 interrupted iterations
+inscription_peak   [   6% ] 046/200 VUs  0m07.0s/2m00.0s
+
+running (0m08.0s), 053/200 VUs, 257 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 053/200 VUs  0m08.0s/2m00.0s
+
+running (0m09.0s), 059/200 VUs, 304 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 059/200 VUs  0m09.0s/2m00.0s
+
+running (0m10.0s), 066/200 VUs, 391 complete and 0 interrupted iterations
+inscription_peak   [   8% ] 066/200 VUs  0m10.0s/2m00.0s
+
+running (0m11.0s), 073/200 VUs, 440 complete and 0 interrupted iterations
+inscription_peak   [   9% ] 073/200 VUs  0m11.0s/2m00.0s
+
+running (0m12.0s), 079/200 VUs, 443 complete and 0 interrupted iterations
+inscription_peak   [  10% ] 079/200 VUs  0m12.0s/2m00.0s
+
+running (0m13.0s), 086/200 VUs, 463 complete and 0 interrupted iterations
+inscription_peak   [  11% ] 086/200 VUs  0m13.0s/2m00.0s
+
+running (0m14.0s), 093/200 VUs, 546 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 093/200 VUs  0m14.0s/2m00.0s
+
+running (0m15.0s), 099/200 VUs, 548 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 099/200 VUs  0m15.0s/2m00.0s
+
+running (0m16.0s), 106/200 VUs, 624 complete and 0 interrupted iterations
+inscription_peak   [  13% ] 106/200 VUs  0m16.0s/2m00.0s
+
+running (0m17.0s), 113/200 VUs, 665 complete and 0 interrupted iterations
+inscription_peak   [  14% ] 113/200 VUs  0m17.0s/2m00.0s
+
+running (0m18.0s), 119/200 VUs, 738 complete and 0 interrupted iterations
+inscription_peak   [  15% ] 119/200 VUs  0m18.0s/2m00.0s
+
+running (0m19.0s), 126/200 VUs, 807 complete and 0 interrupted iterations
+inscription_peak   [  16% ] 126/200 VUs  0m19.0s/2m00.0s
+
+running (0m20.0s), 133/200 VUs, 886 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 133/200 VUs  0m20.0s/2m00.0s
+
+running (0m21.0s), 139/200 VUs, 959 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 139/200 VUs  0m21.0s/2m00.0s
+
+running (0m22.0s), 146/200 VUs, 1057 complete and 0 interrupted iterations
+inscription_peak   [  18% ] 146/200 VUs  0m22.0s/2m00.0s
+
+running (0m23.0s), 153/200 VUs, 1150 complete and 0 interrupted iterations
+inscription_peak   [  19% ] 153/200 VUs  0m23.0s/2m00.0s
+
+running (0m24.0s), 159/200 VUs, 1295 complete and 0 interrupted iterations
+inscription_peak   [  20% ] 159/200 VUs  0m24.0s/2m00.0s
+
+running (0m25.0s), 166/200 VUs, 1387 complete and 0 interrupted iterations
+inscription_peak   [  21% ] 166/200 VUs  0m25.0s/2m00.0s
+
+running (0m26.0s), 173/200 VUs, 1484 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 173/200 VUs  0m26.0s/2m00.0s
+
+running (0m27.0s), 179/200 VUs, 1604 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 179/200 VUs  0m27.0s/2m00.0s
+
+running (0m28.0s), 186/200 VUs, 1683 complete and 0 interrupted iterations
+inscription_peak   [  23% ] 186/200 VUs  0m28.0s/2m00.0s
+
+running (0m29.0s), 193/200 VUs, 1845 complete and 0 interrupted iterations
+inscription_peak   [  24% ] 193/200 VUs  0m29.0s/2m00.0s
+
+running (0m30.0s), 199/200 VUs, 2063 complete and 0 interrupted iterations
+inscription_peak   [  25% ] 199/200 VUs  0m30.0s/2m00.0s
+
+running (0m31.0s), 200/200 VUs, 2168 complete and 0 interrupted iterations
+inscription_peak   [  26% ] 200/200 VUs  0m31.0s/2m00.0s
+
+running (0m32.0s), 200/200 VUs, 2361 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m32.0s/2m00.0s
+
+running (0m33.0s), 200/200 VUs, 2482 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m33.0s/2m00.0s
+
+running (0m34.0s), 200/200 VUs, 2722 complete and 0 interrupted iterations
+inscription_peak   [  28% ] 200/200 VUs  0m34.0s/2m00.0s
+
+running (0m35.0s), 200/200 VUs, 2917 complete and 0 interrupted iterations
+inscription_peak   [  29% ] 200/200 VUs  0m35.0s/2m00.0s
+
+running (0m36.0s), 200/200 VUs, 3175 complete and 0 interrupted iterations
+inscription_peak   [  30% ] 200/200 VUs  0m36.0s/2m00.0s
+
+running (0m37.0s), 200/200 VUs, 3380 complete and 0 interrupted iterations
+inscription_peak   [  31% ] 200/200 VUs  0m37.0s/2m00.0s
+
+running (0m38.0s), 200/200 VUs, 3553 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m38.0s/2m00.0s
+
+running (0m39.0s), 200/200 VUs, 3709 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m39.0s/2m00.0s
+
+running (0m40.0s), 200/200 VUs, 3876 complete and 0 interrupted iterations
+inscription_peak   [  33% ] 200/200 VUs  0m40.0s/2m00.0s
+
+running (0m41.0s), 200/200 VUs, 4053 complete and 0 interrupted iterations
+inscription_peak   [  34% ] 200/200 VUs  0m41.0s/2m00.0s
+
+running (0m42.0s), 200/200 VUs, 4197 complete and 0 interrupted iterations
+inscription_peak   [  35% ] 200/200 VUs  0m42.0s/2m00.0s
+
+running (0m43.0s), 200/200 VUs, 4421 complete and 0 interrupted iterations
+inscription_peak   [  36% ] 200/200 VUs  0m43.0s/2m00.0s
+
+running (0m44.0s), 200/200 VUs, 4474 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m44.0s/2m00.0s
+
+running (0m45.0s), 200/200 VUs, 4547 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m45.0s/2m00.0s
+
+running (0m46.0s), 200/200 VUs, 4621 complete and 0 interrupted iterations
+inscription_peak   [  38% ] 200/200 VUs  0m46.0s/2m00.0s
+
+running (0m47.0s), 200/200 VUs, 4708 complete and 0 interrupted iterations
+inscription_peak   [  39% ] 200/200 VUs  0m47.0s/2m00.0s
+
+running (0m48.0s), 200/200 VUs, 4884 complete and 0 interrupted iterations
+inscription_peak   [  40% ] 200/200 VUs  0m48.0s/2m00.0s
+
+running (0m49.0s), 200/200 VUs, 5015 complete and 0 interrupted iterations
+inscription_peak   [  41% ] 200/200 VUs  0m49.0s/2m00.0s
+
+running (0m50.0s), 200/200 VUs, 5251 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m50.0s/2m00.0s
+
+running (0m51.0s), 200/200 VUs, 5312 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m51.0s/2m00.0s
+
+running (0m52.0s), 200/200 VUs, 5372 complete and 0 interrupted iterations
+inscription_peak   [  43% ] 200/200 VUs  0m52.0s/2m00.0s
+
+running (0m53.0s), 200/200 VUs, 5579 complete and 0 interrupted iterations
+inscription_peak   [  44% ] 200/200 VUs  0m53.0s/2m00.0s
+
+running (0m54.0s), 200/200 VUs, 5700 complete and 0 interrupted iterations
+inscription_peak   [  45% ] 200/200 VUs  0m54.0s/2m00.0s
+
+running (0m55.0s), 200/200 VUs, 5802 complete and 0 interrupted iterations
+inscription_peak   [  46% ] 200/200 VUs  0m55.0s/2m00.0s
+
+running (0m56.0s), 200/200 VUs, 5995 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m56.0s/2m00.0s
+
+running (0m57.0s), 200/200 VUs, 6127 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m57.0s/2m00.0s
+
+running (0m58.0s), 200/200 VUs, 6259 complete and 0 interrupted iterations
+inscription_peak   [  48% ] 200/200 VUs  0m58.0s/2m00.0s
+
+running (0m59.0s), 200/200 VUs, 6387 complete and 0 interrupted iterations
+inscription_peak   [  49% ] 200/200 VUs  0m59.0s/2m00.0s
+
+running (1m00.0s), 200/200 VUs, 6523 complete and 0 interrupted iterations
+inscription_peak   [  50% ] 200/200 VUs  1m00.0s/2m00.0s
+
+running (1m01.0s), 200/200 VUs, 6665 complete and 0 interrupted iterations
+inscription_peak   [  51% ] 200/200 VUs  1m01.0s/2m00.0s
+
+running (1m02.0s), 200/200 VUs, 6798 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m02.0s/2m00.0s
+
+running (1m03.0s), 200/200 VUs, 6924 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m03.0s/2m00.0s
+
+running (1m04.0s), 200/200 VUs, 7059 complete and 0 interrupted iterations
+inscription_peak   [  53% ] 200/200 VUs  1m04.0s/2m00.0s
+
+running (1m05.0s), 200/200 VUs, 7179 complete and 0 interrupted iterations
+inscription_peak   [  54% ] 200/200 VUs  1m05.0s/2m00.0s
+
+running (1m06.0s), 200/200 VUs, 7346 complete and 0 interrupted iterations
+inscription_peak   [  55% ] 200/200 VUs  1m06.0s/2m00.0s
+
+running (1m07.0s), 200/200 VUs, 7498 complete and 0 interrupted iterations
+inscription_peak   [  56% ] 200/200 VUs  1m07.0s/2m00.0s
+
+running (1m08.0s), 200/200 VUs, 7756 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m08.0s/2m00.0s
+
+running (1m09.0s), 200/200 VUs, 7855 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m09.0s/2m00.0s
+
+running (1m10.0s), 200/200 VUs, 8004 complete and 0 interrupted iterations
+inscription_peak   [  58% ] 200/200 VUs  1m10.0s/2m00.0s
+
+running (1m11.0s), 200/200 VUs, 8195 complete and 0 interrupted iterations
+inscription_peak   [  59% ] 200/200 VUs  1m11.0s/2m00.0s
+
+running (1m12.0s), 200/200 VUs, 8363 complete and 0 interrupted iterations
+inscription_peak   [  60% ] 200/200 VUs  1m12.0s/2m00.0s
+
+running (1m13.0s), 200/200 VUs, 8529 complete and 0 interrupted iterations
+inscription_peak   [  61% ] 200/200 VUs  1m13.0s/2m00.0s
+
+running (1m14.0s), 200/200 VUs, 8660 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m14.0s/2m00.0s
+
+running (1m15.0s), 200/200 VUs, 8815 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m15.0s/2m00.0s
+
+running (1m16.0s), 200/200 VUs, 8954 complete and 0 interrupted iterations
+inscription_peak   [  63% ] 200/200 VUs  1m16.0s/2m00.0s
+
+running (1m17.0s), 200/200 VUs, 9064 complete and 0 interrupted iterations
+inscription_peak   [  64% ] 200/200 VUs  1m17.0s/2m00.0s
+
+running (1m18.0s), 200/200 VUs, 9188 complete and 0 interrupted iterations
+inscription_peak   [  65% ] 200/200 VUs  1m18.0s/2m00.0s
+
+running (1m19.0s), 200/200 VUs, 9371 complete and 0 interrupted iterations
+inscription_peak   [  66% ] 200/200 VUs  1m19.0s/2m00.0s
+
+running (1m20.0s), 200/200 VUs, 9632 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m20.0s/2m00.0s
+
+running (1m21.0s), 200/200 VUs, 9729 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m21.0s/2m00.0s
+
+running (1m22.0s), 200/200 VUs, 9883 complete and 0 interrupted iterations
+inscription_peak   [  68% ] 200/200 VUs  1m22.0s/2m00.0s
+
+running (1m23.0s), 200/200 VUs, 10106 complete and 0 interrupted iterations
+inscription_peak   [  69% ] 200/200 VUs  1m23.0s/2m00.0s
+
+running (1m24.0s), 200/200 VUs, 10349 complete and 0 interrupted iterations
+inscription_peak   [  70% ] 200/200 VUs  1m24.0s/2m00.0s
+
+running (1m25.0s), 200/200 VUs, 10433 complete and 0 interrupted iterations
+inscription_peak   [  71% ] 200/200 VUs  1m25.0s/2m00.0s
+
+running (1m26.0s), 200/200 VUs, 10672 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m26.0s/2m00.0s
+
+running (1m27.0s), 200/200 VUs, 10759 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m27.0s/2m00.0s
+
+running (1m28.0s), 200/200 VUs, 10899 complete and 0 interrupted iterations
+inscription_peak   [  73% ] 200/200 VUs  1m28.0s/2m00.0s
+
+running (1m29.0s), 200/200 VUs, 11020 complete and 0 interrupted iterations
+inscription_peak   [  74% ] 200/200 VUs  1m29.0s/2m00.0s
+
+running (1m30.0s), 200/200 VUs, 11153 complete and 0 interrupted iterations
+inscription_peak   [  75% ] 200/200 VUs  1m30.0s/2m00.0s
+
+running (1m31.0s), 198/200 VUs, 11271 complete and 0 interrupted iterations
+inscription_peak   [  76% ] 198/200 VUs  1m31.0s/2m00.0s
+
+running (1m32.0s), 193/200 VUs, 11417 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 193/200 VUs  1m32.0s/2m00.0s
+
+running (1m33.0s), 187/200 VUs, 11555 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 187/200 VUs  1m33.0s/2m00.0s
+
+running (1m34.0s), 179/200 VUs, 11694 complete and 0 interrupted iterations
+inscription_peak   [  78% ] 179/200 VUs  1m34.0s/2m00.0s
+
+running (1m35.0s), 173/200 VUs, 11828 complete and 0 interrupted iterations
+inscription_peak   [  79% ] 173/200 VUs  1m35.0s/2m00.0s
+
+running (1m36.0s), 163/200 VUs, 12008 complete and 0 interrupted iterations
+inscription_peak   [  80% ] 163/200 VUs  1m36.0s/2m00.0s
+
+running (1m37.0s), 159/200 VUs, 12153 complete and 0 interrupted iterations
+inscription_peak   [  81% ] 159/200 VUs  1m37.0s/2m00.0s
+
+running (1m38.0s), 153/200 VUs, 12269 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 153/200 VUs  1m38.0s/2m00.0s
+
+running (1m39.0s), 145/200 VUs, 12437 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 145/200 VUs  1m39.0s/2m00.0s
+
+running (1m40.0s), 141/200 VUs, 12548 complete and 0 interrupted iterations
+inscription_peak   [  83% ] 141/200 VUs  1m40.0s/2m00.0s
+
+running (1m41.0s), 141/200 VUs, 12553 complete and 0 interrupted iterations
+inscription_peak   [  84% ] 141/200 VUs  1m41.0s/2m00.0s
+
+running (1m42.0s), 133/200 VUs, 12623 complete and 0 interrupted iterations
+inscription_peak   [  85% ] 133/200 VUs  1m42.0s/2m00.0s
+
+running (1m43.0s), 117/200 VUs, 12770 complete and 0 interrupted iterations
+inscription_peak   [  86% ] 117/200 VUs  1m43.0s/2m00.0s
+
+running (1m44.0s), 108/200 VUs, 12913 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 108/200 VUs  1m44.0s/2m00.0s
+
+running (1m45.0s), 105/200 VUs, 13046 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 105/200 VUs  1m45.0s/2m00.0s
+
+running (1m46.0s), 100/200 VUs, 13140 complete and 0 interrupted iterations
+inscription_peak   [  88% ] 100/200 VUs  1m46.0s/2m00.0s
+
+running (1m47.0s), 096/200 VUs, 13203 complete and 0 interrupted iterations
+inscription_peak   [  89% ] 096/200 VUs  1m47.0s/2m00.0s
+
+running (1m48.0s), 084/200 VUs, 13308 complete and 0 interrupted iterations
+inscription_peak   [  90% ] 084/200 VUs  1m48.0s/2m00.0s
+
+running (1m49.0s), 082/200 VUs, 13329 complete and 0 interrupted iterations
+inscription_peak   [  91% ] 082/200 VUs  1m49.0s/2m00.0s
+
+running (1m50.0s), 075/200 VUs, 13393 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 075/200 VUs  1m50.0s/2m00.0s
+
+running (1m51.0s), 065/200 VUs, 13441 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 065/200 VUs  1m51.0s/2m00.0s
+
+running (1m52.0s), 056/200 VUs, 13488 complete and 0 interrupted iterations
+inscription_peak   [  93% ] 056/200 VUs  1m52.0s/2m00.0s
+
+running (1m53.0s), 050/200 VUs, 13520 complete and 0 interrupted iterations
+inscription_peak   [  94% ] 050/200 VUs  1m53.0s/2m00.0s
+
+running (1m54.0s), 049/200 VUs, 13534 complete and 0 interrupted iterations
+inscription_peak   [  95% ] 049/200 VUs  1m54.0s/2m00.0s
+
+running (1m55.0s), 042/200 VUs, 13585 complete and 0 interrupted iterations
+inscription_peak   [  96% ] 042/200 VUs  1m55.0s/2m00.0s
+
+running (1m56.0s), 029/200 VUs, 13655 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 029/200 VUs  1m56.0s/2m00.0s
+
+running (1m57.0s), 028/200 VUs, 13683 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 028/200 VUs  1m57.0s/2m00.0s
+
+running (1m58.0s), 016/200 VUs, 13724 complete and 0 interrupted iterations
+inscription_peak   [  98% ] 016/200 VUs  1m58.0s/2m00.0s
+
+running (1m59.0s), 010/200 VUs, 13750 complete and 0 interrupted iterations
+inscription_peak   [  99% ] 010/200 VUs  1m59.0s/2m00.0s
+
+running (2m00.0s), 003/200 VUs, 13767 complete and 0 interrupted iterations
+inscription_peak   [ 100% ] 003/200 VUs  2m00.0s/2m00.0s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=2.21s
+
+    http_req_failed
+    ✓ 'rate<0.05' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 13770   114.64491/s
+    checks_succeeded...: 100.00% 13770 out of 13770
+    checks_failed......: 0.00%   0 out of 13770
+
+    ✓ status is 200
+    ✓ created 201
+
+    HTTP
+    http_req_duration..............: avg=818.12ms min=2.63ms   med=681.3ms max=6.84s p(90)=1.72s p(95)=2.21s
+      { expected_response:true }...: avg=818.12ms min=2.63ms   med=681.3ms max=6.84s p(90)=1.72s p(95)=2.21s
+    http_req_failed................: 0.00%  0 out of 13770
+    http_reqs......................: 13770  114.64491/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.31s    min=502.97ms med=1.18s   max=7.34s p(90)=2.22s p(95)=2.71s
+    iterations.....................: 13770  114.64491/s
+    vus............................: 3      min=3          max=200
+    vus_max........................: 200    min=200        max=200
+
+    NETWORK
+    data_received..................: 19 MB  157 kB/s
+    data_sent......................: 2.1 MB 18 kB/s
+
+
+
+
+running (2m00.1s), 000/200 VUs, 13770 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs  2m0s
+time="2026-02-16T07:24:32Z" level=error msg="thresholds on metrics 'http_req_duration' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "keda-hpa-fastapi-keda" deleted from academic namespace
+No resources found
+scaledobject.keda.sh "fastapi-keda" deleted from academic namespace
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 4141
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          70m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          73m
+=== Reset terminé ===
+
+=== Test s7/c2/run1 terminé ===
+Résultats: results/s7/c2/run1_20260216_072231.json
+Métriques: results/s7/c2/run1_20260216_072231_metrics.json
+Logs:      results/s7/c2/run1_20260216_072231.log
+Pause de 15s...
+
+>>>>>>>>>> Test 2/3 : s7/c2/run2 <<<<<<<<<<
+
+# Stratégie: s7 | Scénario: c2 | Run: 2
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 0
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          70m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          73m
+=== Reset terminé ===
+[2/5] Application de la stratégie s7...
+scaledobject.keda.sh/fastapi-keda created
+Attente activation autoscaler (15s)...
+Vérification connectivité NodePort...
+NodePort OK
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s7/c2/run2_20260216_072536.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+running (0m01.0s), 006/200 VUs, 2 complete and 0 interrupted iterations
+inscription_peak   [   1% ] 006/200 VUs  0m01.0s/2m00.0s
+
+running (0m02.0s), 013/200 VUs, 17 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 013/200 VUs  0m02.0s/2m00.0s
+
+running (0m03.0s), 019/200 VUs, 45 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 019/200 VUs  0m03.0s/2m00.0s
+
+running (0m04.0s), 026/200 VUs, 85 complete and 0 interrupted iterations
+inscription_peak   [   3% ] 026/200 VUs  0m04.0s/2m00.0s
+
+running (0m05.0s), 033/200 VUs, 139 complete and 0 interrupted iterations
+inscription_peak   [   4% ] 033/200 VUs  0m05.0s/2m00.0s
+
+running (0m06.0s), 039/200 VUs, 206 complete and 0 interrupted iterations
+inscription_peak   [   5% ] 039/200 VUs  0m06.0s/2m00.0s
+
+running (0m07.0s), 046/200 VUs, 283 complete and 0 interrupted iterations
+inscription_peak   [   6% ] 046/200 VUs  0m07.0s/2m00.0s
+
+running (0m08.0s), 052/200 VUs, 363 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 052/200 VUs  0m08.0s/2m00.0s
+
+running (0m09.0s), 059/200 VUs, 404 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 059/200 VUs  0m09.0s/2m00.0s
+
+running (0m10.0s), 066/200 VUs, 447 complete and 0 interrupted iterations
+inscription_peak   [   8% ] 066/200 VUs  0m10.0s/2m00.0s
+
+running (0m11.0s), 072/200 VUs, 542 complete and 0 interrupted iterations
+inscription_peak   [   9% ] 072/200 VUs  0m11.0s/2m00.0s
+
+running (0m12.0s), 079/200 VUs, 602 complete and 0 interrupted iterations
+inscription_peak   [  10% ] 079/200 VUs  0m12.0s/2m00.0s
+
+running (0m13.0s), 086/200 VUs, 666 complete and 0 interrupted iterations
+inscription_peak   [  11% ] 086/200 VUs  0m13.0s/2m00.0s
+
+running (0m14.0s), 093/200 VUs, 780 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 093/200 VUs  0m14.0s/2m00.0s
+
+running (0m15.0s), 099/200 VUs, 794 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 099/200 VUs  0m15.0s/2m00.0s
+
+running (0m16.0s), 106/200 VUs, 857 complete and 0 interrupted iterations
+inscription_peak   [  13% ] 106/200 VUs  0m16.0s/2m00.0s
+
+running (0m17.0s), 112/200 VUs, 956 complete and 0 interrupted iterations
+inscription_peak   [  14% ] 112/200 VUs  0m17.0s/2m00.0s
+
+running (0m18.0s), 119/200 VUs, 1045 complete and 0 interrupted iterations
+inscription_peak   [  15% ] 119/200 VUs  0m18.0s/2m00.0s
+
+running (0m19.0s), 126/200 VUs, 1110 complete and 0 interrupted iterations
+inscription_peak   [  16% ] 126/200 VUs  0m19.0s/2m00.0s
+
+running (0m20.0s), 133/200 VUs, 1112 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 133/200 VUs  0m20.0s/2m00.0s
+
+running (0m21.0s), 139/200 VUs, 1256 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 139/200 VUs  0m21.0s/2m00.0s
+
+running (0m22.0s), 146/200 VUs, 1273 complete and 0 interrupted iterations
+inscription_peak   [  18% ] 146/200 VUs  0m22.0s/2m00.0s
+
+running (0m23.0s), 153/200 VUs, 1298 complete and 0 interrupted iterations
+inscription_peak   [  19% ] 153/200 VUs  0m23.0s/2m00.0s
+
+running (0m24.0s), 159/200 VUs, 1446 complete and 0 interrupted iterations
+inscription_peak   [  20% ] 159/200 VUs  0m24.0s/2m00.0s
+
+running (0m25.0s), 166/200 VUs, 1546 complete and 0 interrupted iterations
+inscription_peak   [  21% ] 166/200 VUs  0m25.0s/2m00.0s
+
+running (0m26.0s), 173/200 VUs, 1619 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 173/200 VUs  0m26.0s/2m00.0s
+
+running (0m27.0s), 179/200 VUs, 1775 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 179/200 VUs  0m27.0s/2m00.0s
+
+running (0m28.0s), 186/200 VUs, 1831 complete and 0 interrupted iterations
+inscription_peak   [  23% ] 186/200 VUs  0m28.0s/2m00.0s
+
+running (0m29.0s), 193/200 VUs, 2020 complete and 0 interrupted iterations
+inscription_peak   [  24% ] 193/200 VUs  0m29.0s/2m00.0s
+
+running (0m30.0s), 199/200 VUs, 2086 complete and 0 interrupted iterations
+inscription_peak   [  25% ] 199/200 VUs  0m30.0s/2m00.0s
+
+running (0m31.0s), 200/200 VUs, 2261 complete and 0 interrupted iterations
+inscription_peak   [  26% ] 200/200 VUs  0m31.0s/2m00.0s
+
+running (0m32.0s), 200/200 VUs, 2508 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m32.0s/2m00.0s
+
+running (0m33.0s), 200/200 VUs, 2655 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m33.0s/2m00.0s
+
+running (0m34.0s), 200/200 VUs, 2802 complete and 0 interrupted iterations
+inscription_peak   [  28% ] 200/200 VUs  0m34.0s/2m00.0s
+
+running (0m35.0s), 200/200 VUs, 2923 complete and 0 interrupted iterations
+inscription_peak   [  29% ] 200/200 VUs  0m35.0s/2m00.0s
+
+running (0m36.0s), 200/200 VUs, 2998 complete and 0 interrupted iterations
+inscription_peak   [  30% ] 200/200 VUs  0m36.0s/2m00.0s
+
+running (0m37.0s), 200/200 VUs, 3135 complete and 0 interrupted iterations
+inscription_peak   [  31% ] 200/200 VUs  0m37.0s/2m00.0s
+
+running (0m38.0s), 200/200 VUs, 3266 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m38.0s/2m00.0s
+
+running (0m39.0s), 200/200 VUs, 3401 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m39.0s/2m00.0s
+
+running (0m40.0s), 200/200 VUs, 3530 complete and 0 interrupted iterations
+inscription_peak   [  33% ] 200/200 VUs  0m40.0s/2m00.0s
+
+running (0m41.0s), 200/200 VUs, 3753 complete and 0 interrupted iterations
+inscription_peak   [  34% ] 200/200 VUs  0m41.0s/2m00.0s
+
+running (0m42.0s), 200/200 VUs, 3821 complete and 0 interrupted iterations
+inscription_peak   [  35% ] 200/200 VUs  0m42.0s/2m00.0s
+
+running (0m43.0s), 200/200 VUs, 3888 complete and 0 interrupted iterations
+inscription_peak   [  36% ] 200/200 VUs  0m43.0s/2m00.0s
+
+running (0m44.0s), 200/200 VUs, 4005 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m44.0s/2m00.0s
+
+running (0m45.0s), 200/200 VUs, 4147 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m45.0s/2m00.0s
+
+running (0m46.0s), 200/200 VUs, 4288 complete and 0 interrupted iterations
+inscription_peak   [  38% ] 200/200 VUs  0m46.0s/2m00.0s
+
+running (0m47.0s), 200/200 VUs, 4428 complete and 0 interrupted iterations
+inscription_peak   [  39% ] 200/200 VUs  0m47.0s/2m00.0s
+
+running (0m48.0s), 200/200 VUs, 4551 complete and 0 interrupted iterations
+inscription_peak   [  40% ] 200/200 VUs  0m48.0s/2m00.0s
+
+running (0m49.0s), 200/200 VUs, 4748 complete and 0 interrupted iterations
+inscription_peak   [  41% ] 200/200 VUs  0m49.0s/2m00.0s
+
+running (0m50.0s), 200/200 VUs, 5015 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m50.0s/2m00.0s
+
+running (0m51.0s), 200/200 VUs, 5260 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m51.0s/2m00.0s
+
+running (0m52.0s), 200/200 VUs, 5505 complete and 0 interrupted iterations
+inscription_peak   [  43% ] 200/200 VUs  0m52.0s/2m00.0s
+
+running (0m53.0s), 200/200 VUs, 5706 complete and 0 interrupted iterations
+inscription_peak   [  44% ] 200/200 VUs  0m53.0s/2m00.0s
+
+running (0m54.0s), 200/200 VUs, 5917 complete and 0 interrupted iterations
+inscription_peak   [  45% ] 200/200 VUs  0m54.0s/2m00.0s
+
+running (0m55.0s), 200/200 VUs, 6161 complete and 0 interrupted iterations
+inscription_peak   [  46% ] 200/200 VUs  0m55.0s/2m00.0s
+
+running (0m56.0s), 200/200 VUs, 6308 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m56.0s/2m00.0s
+
+running (0m57.0s), 200/200 VUs, 6561 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m57.0s/2m00.0s
+
+running (0m58.0s), 200/200 VUs, 6614 complete and 0 interrupted iterations
+inscription_peak   [  48% ] 200/200 VUs  0m58.0s/2m00.0s
+
+running (0m59.0s), 200/200 VUs, 6772 complete and 0 interrupted iterations
+inscription_peak   [  49% ] 200/200 VUs  0m59.0s/2m00.0s
+
+running (1m00.0s), 200/200 VUs, 6976 complete and 0 interrupted iterations
+inscription_peak   [  50% ] 200/200 VUs  1m00.0s/2m00.0s
+
+running (1m01.0s), 200/200 VUs, 7206 complete and 0 interrupted iterations
+inscription_peak   [  51% ] 200/200 VUs  1m01.0s/2m00.0s
+
+running (1m02.0s), 200/200 VUs, 7389 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m02.0s/2m00.0s
+
+running (1m03.0s), 200/200 VUs, 7465 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m03.0s/2m00.0s
+
+running (1m04.0s), 200/200 VUs, 7601 complete and 0 interrupted iterations
+inscription_peak   [  53% ] 200/200 VUs  1m04.0s/2m00.0s
+
+running (1m05.0s), 200/200 VUs, 7864 complete and 0 interrupted iterations
+inscription_peak   [  54% ] 200/200 VUs  1m05.0s/2m00.0s
+
+running (1m06.0s), 200/200 VUs, 7991 complete and 0 interrupted iterations
+inscription_peak   [  55% ] 200/200 VUs  1m06.0s/2m00.0s
+
+running (1m07.0s), 200/200 VUs, 8140 complete and 0 interrupted iterations
+inscription_peak   [  56% ] 200/200 VUs  1m07.0s/2m00.0s
+
+running (1m08.0s), 200/200 VUs, 8358 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m08.0s/2m00.0s
+
+running (1m09.0s), 200/200 VUs, 8457 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m09.0s/2m00.0s
+
+running (1m10.0s), 200/200 VUs, 8579 complete and 0 interrupted iterations
+inscription_peak   [  58% ] 200/200 VUs  1m10.0s/2m00.0s
+
+running (1m11.0s), 200/200 VUs, 8701 complete and 0 interrupted iterations
+inscription_peak   [  59% ] 200/200 VUs  1m11.0s/2m00.0s
+
+running (1m12.0s), 200/200 VUs, 8842 complete and 0 interrupted iterations
+inscription_peak   [  60% ] 200/200 VUs  1m12.0s/2m00.0s
+
+running (1m13.0s), 200/200 VUs, 9013 complete and 0 interrupted iterations
+inscription_peak   [  61% ] 200/200 VUs  1m13.0s/2m00.0s
+
+running (1m14.0s), 200/200 VUs, 9264 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m14.0s/2m00.0s
+
+running (1m15.0s), 200/200 VUs, 9427 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m15.0s/2m00.0s
+
+running (1m16.0s), 200/200 VUs, 9554 complete and 0 interrupted iterations
+inscription_peak   [  63% ] 200/200 VUs  1m16.0s/2m00.0s
+
+running (1m17.0s), 200/200 VUs, 9674 complete and 0 interrupted iterations
+inscription_peak   [  64% ] 200/200 VUs  1m17.0s/2m00.0s
+
+running (1m18.0s), 200/200 VUs, 9904 complete and 0 interrupted iterations
+inscription_peak   [  65% ] 200/200 VUs  1m18.0s/2m00.0s
+
+running (1m19.0s), 200/200 VUs, 10022 complete and 0 interrupted iterations
+inscription_peak   [  66% ] 200/200 VUs  1m19.0s/2m00.0s
+
+running (1m20.0s), 200/200 VUs, 10148 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m20.0s/2m00.0s
+
+running (1m21.0s), 200/200 VUs, 10386 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m21.0s/2m00.0s
+
+running (1m22.0s), 200/200 VUs, 10430 complete and 0 interrupted iterations
+inscription_peak   [  68% ] 200/200 VUs  1m22.0s/2m00.0s
+
+running (1m23.0s), 200/200 VUs, 10463 complete and 0 interrupted iterations
+inscription_peak   [  69% ] 200/200 VUs  1m23.0s/2m00.0s
+
+running (1m24.0s), 200/200 VUs, 10550 complete and 0 interrupted iterations
+inscription_peak   [  70% ] 200/200 VUs  1m24.0s/2m00.0s
+
+running (1m25.0s), 200/200 VUs, 10695 complete and 0 interrupted iterations
+inscription_peak   [  71% ] 200/200 VUs  1m25.0s/2m00.0s
+
+running (1m26.0s), 200/200 VUs, 10822 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m26.0s/2m00.0s
+
+running (1m27.0s), 200/200 VUs, 10951 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m27.0s/2m00.0s
+
+running (1m28.0s), 200/200 VUs, 11076 complete and 0 interrupted iterations
+inscription_peak   [  73% ] 200/200 VUs  1m28.0s/2m00.0s
+
+running (1m29.0s), 200/200 VUs, 11205 complete and 0 interrupted iterations
+inscription_peak   [  74% ] 200/200 VUs  1m29.0s/2m00.0s
+
+running (1m30.0s), 200/200 VUs, 11344 complete and 0 interrupted iterations
+inscription_peak   [  75% ] 200/200 VUs  1m30.0s/2m00.0s
+
+running (1m31.0s), 199/200 VUs, 11482 complete and 0 interrupted iterations
+inscription_peak   [  76% ] 199/200 VUs  1m31.0s/2m00.0s
+
+running (1m32.0s), 194/200 VUs, 11586 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 194/200 VUs  1m32.0s/2m00.0s
+
+running (1m33.0s), 189/200 VUs, 11741 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 189/200 VUs  1m33.0s/2m00.0s
+
+running (1m34.0s), 184/200 VUs, 11871 complete and 0 interrupted iterations
+inscription_peak   [  78% ] 184/200 VUs  1m34.0s/2m00.0s
+
+running (1m35.0s), 172/200 VUs, 12002 complete and 0 interrupted iterations
+inscription_peak   [  79% ] 172/200 VUs  1m35.0s/2m00.0s
+
+running (1m36.0s), 162/200 VUs, 12212 complete and 0 interrupted iterations
+inscription_peak   [  80% ] 162/200 VUs  1m36.0s/2m00.0s
+
+running (1m37.0s), 158/200 VUs, 12299 complete and 0 interrupted iterations
+inscription_peak   [  81% ] 158/200 VUs  1m37.0s/2m00.0s
+
+running (1m38.0s), 155/200 VUs, 12350 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 155/200 VUs  1m38.0s/2m00.0s
+
+running (1m39.0s), 147/200 VUs, 12450 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 147/200 VUs  1m39.0s/2m00.0s
+
+running (1m40.0s), 138/200 VUs, 12559 complete and 0 interrupted iterations
+inscription_peak   [  83% ] 138/200 VUs  1m40.0s/2m00.0s
+
+running (1m41.0s), 129/200 VUs, 12666 complete and 0 interrupted iterations
+inscription_peak   [  84% ] 129/200 VUs  1m41.0s/2m00.0s
+
+running (1m42.0s), 124/200 VUs, 12809 complete and 0 interrupted iterations
+inscription_peak   [  85% ] 124/200 VUs  1m42.0s/2m00.0s
+
+running (1m43.0s), 119/200 VUs, 12908 complete and 0 interrupted iterations
+inscription_peak   [  86% ] 119/200 VUs  1m43.0s/2m00.0s
+
+running (1m44.0s), 114/200 VUs, 12975 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 114/200 VUs  1m44.0s/2m00.0s
+
+running (1m45.0s), 102/200 VUs, 13122 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 102/200 VUs  1m45.0s/2m00.0s
+
+running (1m46.0s), 099/200 VUs, 13245 complete and 0 interrupted iterations
+inscription_peak   [  88% ] 099/200 VUs  1m46.0s/2m00.0s
+
+running (1m47.0s), 097/200 VUs, 13322 complete and 0 interrupted iterations
+inscription_peak   [  89% ] 097/200 VUs  1m47.0s/2m00.0s
+
+running (1m48.0s), 096/200 VUs, 13363 complete and 0 interrupted iterations
+inscription_peak   [  90% ] 096/200 VUs  1m48.0s/2m00.0s
+
+running (1m49.0s), 078/200 VUs, 13456 complete and 0 interrupted iterations
+inscription_peak   [  91% ] 078/200 VUs  1m49.0s/2m00.0s
+
+running (1m50.0s), 075/200 VUs, 13485 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 075/200 VUs  1m50.0s/2m00.0s
+
+running (1m51.0s), 063/200 VUs, 13560 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 063/200 VUs  1m51.0s/2m00.0s
+
+running (1m52.0s), 061/200 VUs, 13588 complete and 0 interrupted iterations
+inscription_peak   [  93% ] 061/200 VUs  1m52.0s/2m00.0s
+
+running (1m53.0s), 059/200 VUs, 13594 complete and 0 interrupted iterations
+inscription_peak   [  94% ] 059/200 VUs  1m53.0s/2m00.0s
+
+running (1m54.0s), 043/200 VUs, 13661 complete and 0 interrupted iterations
+inscription_peak   [  95% ] 043/200 VUs  1m54.0s/2m00.0s
+
+running (1m55.0s), 043/200 VUs, 13671 complete and 0 interrupted iterations
+inscription_peak   [  96% ] 043/200 VUs  1m55.0s/2m00.0s
+
+running (1m56.0s), 034/200 VUs, 13702 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 034/200 VUs  1m56.0s/2m00.0s
+
+running (1m57.0s), 023/200 VUs, 13733 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 023/200 VUs  1m57.0s/2m00.0s
+
+running (1m58.0s), 021/200 VUs, 13746 complete and 0 interrupted iterations
+inscription_peak   [  98% ] 021/200 VUs  1m58.0s/2m00.0s
+
+running (1m59.0s), 009/200 VUs, 13778 complete and 0 interrupted iterations
+inscription_peak   [  99% ] 009/200 VUs  1m59.0s/2m00.0s
+
+running (2m00.0s), 003/200 VUs, 13792 complete and 0 interrupted iterations
+inscription_peak   [ 100% ] 003/200 VUs  2m00.0s/2m00.0s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=2.32s
+
+    http_req_failed
+    ✓ 'rate<0.05' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 13795   114.622114/s
+    checks_succeeded...: 100.00% 13795 out of 13795
+    checks_failed......: 0.00%   0 out of 13795
+
+    ✓ created 201
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=816.06ms min=2.71ms  med=626.51ms max=6.71s p(90)=1.93s p(95)=2.32s
+      { expected_response:true }...: avg=816.06ms min=2.71ms  med=626.51ms max=6.71s p(90)=1.93s p(95)=2.32s
+    http_req_failed................: 0.00%  0 out of 13795
+    http_reqs......................: 13795  114.622114/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.31s    min=503.2ms med=1.12s    max=7.22s p(90)=2.43s p(95)=2.82s
+    iterations.....................: 13795  114.622114/s
+    vus............................: 3      min=3          max=200
+    vus_max........................: 200    min=200        max=200
+
+    NETWORK
+    data_received..................: 19 MB  157 kB/s
+    data_sent......................: 2.1 MB 18 kB/s
+
+
+
+
+running (2m00.4s), 000/200 VUs, 13795 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs  2m0s
+time="2026-02-16T07:27:37Z" level=error msg="thresholds on metrics 'http_req_duration' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "keda-hpa-fastapi-keda" deleted from academic namespace
+No resources found
+scaledobject.keda.sh "fastapi-keda" deleted from academic namespace
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 4145
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          73m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          76m
+=== Reset terminé ===
+
+=== Test s7/c2/run2 terminé ===
+Résultats: results/s7/c2/run2_20260216_072536.json
+Métriques: results/s7/c2/run2_20260216_072536_metrics.json
+Logs:      results/s7/c2/run2_20260216_072536.log
+Pause de 15s...
+
+>>>>>>>>>> Test 3/3 : s7/c2/run3 <<<<<<<<<<
+
+# Stratégie: s7 | Scénario: c2 | Run: 3
+
+[1/5] Reset du déploiement...
+=== Nettoyage des autoscalers ===
+No resources found
+No resources found
+No resources found
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 0
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          73m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          76m
+=== Reset terminé ===
+[2/5] Application de la stratégie s7...
+scaledobject.keda.sh/fastapi-keda created
+Attente activation autoscaler (15s)...
+Vérification connectivité NodePort...
+NodePort OK
+[3/5] Lancement du test k6 (c2)...
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: k6/c2-inscriptions.js
+        output: json (results/s7/c2/run3_20260216_072840.json)
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 2m30s max duration (incl. graceful stop):
+              * inscription_peak: Up to 200 looping VUs for 2m0s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+running (0m00.9s), 006/200 VUs, 2 complete and 0 interrupted iterations
+inscription_peak   [   1% ] 006/200 VUs  0m00.9s/2m00.0s
+
+running (0m01.9s), 012/200 VUs, 17 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 012/200 VUs  0m01.9s/2m00.0s
+
+running (0m02.9s), 019/200 VUs, 44 complete and 0 interrupted iterations
+inscription_peak   [   2% ] 019/200 VUs  0m02.9s/2m00.0s
+
+running (0m03.9s), 026/200 VUs, 85 complete and 0 interrupted iterations
+inscription_peak   [   3% ] 026/200 VUs  0m03.9s/2m00.0s
+
+running (0m04.9s), 032/200 VUs, 140 complete and 0 interrupted iterations
+inscription_peak   [   4% ] 032/200 VUs  0m04.9s/2m00.0s
+
+running (0m05.9s), 039/200 VUs, 205 complete and 0 interrupted iterations
+inscription_peak   [   5% ] 039/200 VUs  0m05.9s/2m00.0s
+
+running (0m06.9s), 046/200 VUs, 284 complete and 0 interrupted iterations
+inscription_peak   [   6% ] 046/200 VUs  0m06.9s/2m00.0s
+
+running (0m07.9s), 052/200 VUs, 379 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 052/200 VUs  0m07.9s/2m00.0s
+
+running (0m08.9s), 059/200 VUs, 482 complete and 0 interrupted iterations
+inscription_peak   [   7% ] 059/200 VUs  0m08.9s/2m00.0s
+
+running (0m09.9s), 066/200 VUs, 593 complete and 0 interrupted iterations
+inscription_peak   [   8% ] 066/200 VUs  0m09.9s/2m00.0s
+
+running (0m10.9s), 072/200 VUs, 605 complete and 0 interrupted iterations
+inscription_peak   [   9% ] 072/200 VUs  0m10.9s/2m00.0s
+
+running (0m11.9s), 079/200 VUs, 609 complete and 0 interrupted iterations
+inscription_peak   [  10% ] 079/200 VUs  0m11.9s/2m00.0s
+
+running (0m12.9s), 086/200 VUs, 692 complete and 0 interrupted iterations
+inscription_peak   [  11% ] 086/200 VUs  0m12.9s/2m00.0s
+
+running (0m13.9s), 092/200 VUs, 709 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 092/200 VUs  0m13.9s/2m00.0s
+
+running (0m14.9s), 099/200 VUs, 815 complete and 0 interrupted iterations
+inscription_peak   [  12% ] 099/200 VUs  0m14.9s/2m00.0s
+
+running (0m15.9s), 106/200 VUs, 893 complete and 0 interrupted iterations
+inscription_peak   [  13% ] 106/200 VUs  0m15.9s/2m00.0s
+
+running (0m16.9s), 112/200 VUs, 975 complete and 0 interrupted iterations
+inscription_peak   [  14% ] 112/200 VUs  0m16.9s/2m00.0s
+
+running (0m17.9s), 119/200 VUs, 1119 complete and 0 interrupted iterations
+inscription_peak   [  15% ] 119/200 VUs  0m17.9s/2m00.0s
+
+running (0m18.9s), 126/200 VUs, 1138 complete and 0 interrupted iterations
+inscription_peak   [  16% ] 126/200 VUs  0m18.9s/2m00.0s
+
+running (0m19.9s), 132/200 VUs, 1298 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 132/200 VUs  0m19.9s/2m00.0s
+
+running (0m20.9s), 139/200 VUs, 1354 complete and 0 interrupted iterations
+inscription_peak   [  17% ] 139/200 VUs  0m20.9s/2m00.0s
+
+running (0m21.9s), 146/200 VUs, 1547 complete and 0 interrupted iterations
+inscription_peak   [  18% ] 146/200 VUs  0m21.9s/2m00.0s
+
+running (0m22.9s), 152/200 VUs, 1598 complete and 0 interrupted iterations
+inscription_peak   [  19% ] 152/200 VUs  0m22.9s/2m00.0s
+
+running (0m23.9s), 159/200 VUs, 1725 complete and 0 interrupted iterations
+inscription_peak   [  20% ] 159/200 VUs  0m23.9s/2m00.0s
+
+running (0m24.9s), 166/200 VUs, 1831 complete and 0 interrupted iterations
+inscription_peak   [  21% ] 166/200 VUs  0m24.9s/2m00.0s
+
+running (0m25.9s), 172/200 VUs, 1943 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 172/200 VUs  0m25.9s/2m00.0s
+
+running (0m26.9s), 179/200 VUs, 1945 complete and 0 interrupted iterations
+inscription_peak   [  22% ] 179/200 VUs  0m26.9s/2m00.0s
+
+running (0m27.9s), 186/200 VUs, 2105 complete and 0 interrupted iterations
+inscription_peak   [  23% ] 186/200 VUs  0m27.9s/2m00.0s
+
+running (0m28.9s), 192/200 VUs, 2234 complete and 0 interrupted iterations
+inscription_peak   [  24% ] 192/200 VUs  0m28.9s/2m00.0s
+
+running (0m29.9s), 199/200 VUs, 2365 complete and 0 interrupted iterations
+inscription_peak   [  25% ] 199/200 VUs  0m29.9s/2m00.0s
+
+running (0m30.9s), 200/200 VUs, 2505 complete and 0 interrupted iterations
+inscription_peak   [  26% ] 200/200 VUs  0m30.9s/2m00.0s
+
+running (0m31.9s), 200/200 VUs, 2635 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m31.9s/2m00.0s
+
+running (0m32.9s), 200/200 VUs, 2792 complete and 0 interrupted iterations
+inscription_peak   [  27% ] 200/200 VUs  0m32.9s/2m00.0s
+
+running (0m33.9s), 200/200 VUs, 2920 complete and 0 interrupted iterations
+inscription_peak   [  28% ] 200/200 VUs  0m33.9s/2m00.0s
+
+running (0m34.9s), 200/200 VUs, 3065 complete and 0 interrupted iterations
+inscription_peak   [  29% ] 200/200 VUs  0m34.9s/2m00.0s
+
+running (0m35.9s), 200/200 VUs, 3211 complete and 0 interrupted iterations
+inscription_peak   [  30% ] 200/200 VUs  0m35.9s/2m00.0s
+
+running (0m36.9s), 200/200 VUs, 3358 complete and 0 interrupted iterations
+inscription_peak   [  31% ] 200/200 VUs  0m36.9s/2m00.0s
+
+running (0m37.9s), 200/200 VUs, 3498 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m37.9s/2m00.0s
+
+running (0m38.9s), 200/200 VUs, 3760 complete and 0 interrupted iterations
+inscription_peak   [  32% ] 200/200 VUs  0m38.9s/2m00.0s
+
+running (0m39.9s), 200/200 VUs, 3999 complete and 0 interrupted iterations
+inscription_peak   [  33% ] 200/200 VUs  0m39.9s/2m00.0s
+
+running (0m40.9s), 200/200 VUs, 4111 complete and 0 interrupted iterations
+inscription_peak   [  34% ] 200/200 VUs  0m40.9s/2m00.0s
+
+running (0m41.9s), 200/200 VUs, 4228 complete and 0 interrupted iterations
+inscription_peak   [  35% ] 200/200 VUs  0m41.9s/2m00.0s
+
+running (0m42.9s), 200/200 VUs, 4304 complete and 0 interrupted iterations
+inscription_peak   [  36% ] 200/200 VUs  0m42.9s/2m00.0s
+
+running (0m43.9s), 200/200 VUs, 4480 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m43.9s/2m00.0s
+
+running (0m44.9s), 200/200 VUs, 4742 complete and 0 interrupted iterations
+inscription_peak   [  37% ] 200/200 VUs  0m44.9s/2m00.0s
+
+running (0m45.9s), 200/200 VUs, 4939 complete and 0 interrupted iterations
+inscription_peak   [  38% ] 200/200 VUs  0m45.9s/2m00.0s
+
+running (0m46.9s), 200/200 VUs, 5217 complete and 0 interrupted iterations
+inscription_peak   [  39% ] 200/200 VUs  0m46.9s/2m00.0s
+
+running (0m47.9s), 200/200 VUs, 5460 complete and 0 interrupted iterations
+inscription_peak   [  40% ] 200/200 VUs  0m47.9s/2m00.0s
+
+running (0m48.9s), 200/200 VUs, 5743 complete and 0 interrupted iterations
+inscription_peak   [  41% ] 200/200 VUs  0m48.9s/2m00.0s
+
+running (0m49.9s), 200/200 VUs, 5853 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m49.9s/2m00.0s
+
+running (0m50.9s), 200/200 VUs, 6070 complete and 0 interrupted iterations
+inscription_peak   [  42% ] 200/200 VUs  0m50.9s/2m00.0s
+
+running (0m51.9s), 200/200 VUs, 6156 complete and 0 interrupted iterations
+inscription_peak   [  43% ] 200/200 VUs  0m51.9s/2m00.0s
+
+running (0m52.9s), 200/200 VUs, 6355 complete and 0 interrupted iterations
+inscription_peak   [  44% ] 200/200 VUs  0m52.9s/2m00.0s
+
+running (0m53.9s), 200/200 VUs, 6490 complete and 0 interrupted iterations
+inscription_peak   [  45% ] 200/200 VUs  0m53.9s/2m00.0s
+
+running (0m54.9s), 200/200 VUs, 6588 complete and 0 interrupted iterations
+inscription_peak   [  46% ] 200/200 VUs  0m54.9s/2m00.0s
+
+running (0m55.9s), 200/200 VUs, 6689 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m55.9s/2m00.0s
+
+running (0m56.9s), 200/200 VUs, 6832 complete and 0 interrupted iterations
+inscription_peak   [  47% ] 200/200 VUs  0m56.9s/2m00.0s
+
+running (0m57.9s), 200/200 VUs, 6960 complete and 0 interrupted iterations
+inscription_peak   [  48% ] 200/200 VUs  0m57.9s/2m00.0s
+
+running (0m58.9s), 200/200 VUs, 7090 complete and 0 interrupted iterations
+inscription_peak   [  49% ] 200/200 VUs  0m58.9s/2m00.0s
+
+running (0m59.9s), 200/200 VUs, 7344 complete and 0 interrupted iterations
+inscription_peak   [  50% ] 200/200 VUs  0m59.9s/2m00.0s
+
+running (1m00.9s), 200/200 VUs, 7456 complete and 0 interrupted iterations
+inscription_peak   [  51% ] 200/200 VUs  1m00.9s/2m00.0s
+
+running (1m01.9s), 200/200 VUs, 7601 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m01.9s/2m00.0s
+
+running (1m02.9s), 200/200 VUs, 7732 complete and 0 interrupted iterations
+inscription_peak   [  52% ] 200/200 VUs  1m02.9s/2m00.0s
+
+running (1m03.9s), 200/200 VUs, 7869 complete and 0 interrupted iterations
+inscription_peak   [  53% ] 200/200 VUs  1m03.9s/2m00.0s
+
+running (1m04.9s), 200/200 VUs, 8117 complete and 0 interrupted iterations
+inscription_peak   [  54% ] 200/200 VUs  1m04.9s/2m00.0s
+
+running (1m05.9s), 200/200 VUs, 8268 complete and 0 interrupted iterations
+inscription_peak   [  55% ] 200/200 VUs  1m05.9s/2m00.0s
+
+running (1m06.9s), 200/200 VUs, 8496 complete and 0 interrupted iterations
+inscription_peak   [  56% ] 200/200 VUs  1m06.9s/2m00.0s
+
+running (1m07.9s), 200/200 VUs, 8613 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m07.9s/2m00.0s
+
+running (1m08.9s), 200/200 VUs, 8761 complete and 0 interrupted iterations
+inscription_peak   [  57% ] 200/200 VUs  1m08.9s/2m00.0s
+
+running (1m09.9s), 200/200 VUs, 8883 complete and 0 interrupted iterations
+inscription_peak   [  58% ] 200/200 VUs  1m09.9s/2m00.0s
+
+running (1m10.9s), 200/200 VUs, 9025 complete and 0 interrupted iterations
+inscription_peak   [  59% ] 200/200 VUs  1m10.9s/2m00.0s
+
+running (1m11.9s), 200/200 VUs, 9158 complete and 0 interrupted iterations
+inscription_peak   [  60% ] 200/200 VUs  1m11.9s/2m00.0s
+
+running (1m12.9s), 200/200 VUs, 9386 complete and 0 interrupted iterations
+inscription_peak   [  61% ] 200/200 VUs  1m12.9s/2m00.0s
+
+running (1m13.9s), 200/200 VUs, 9479 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m13.9s/2m00.0s
+
+running (1m14.9s), 200/200 VUs, 9666 complete and 0 interrupted iterations
+inscription_peak   [  62% ] 200/200 VUs  1m14.9s/2m00.0s
+
+running (1m15.9s), 200/200 VUs, 9849 complete and 0 interrupted iterations
+inscription_peak   [  63% ] 200/200 VUs  1m15.9s/2m00.0s
+
+running (1m16.9s), 200/200 VUs, 10091 complete and 0 interrupted iterations
+inscription_peak   [  64% ] 200/200 VUs  1m16.9s/2m00.0s
+
+running (1m17.9s), 200/200 VUs, 10236 complete and 0 interrupted iterations
+inscription_peak   [  65% ] 200/200 VUs  1m17.9s/2m00.0s
+
+running (1m18.9s), 200/200 VUs, 10339 complete and 0 interrupted iterations
+inscription_peak   [  66% ] 200/200 VUs  1m18.9s/2m00.0s
+
+running (1m19.9s), 200/200 VUs, 10461 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m19.9s/2m00.0s
+
+running (1m20.9s), 200/200 VUs, 10584 complete and 0 interrupted iterations
+inscription_peak   [  67% ] 200/200 VUs  1m20.9s/2m00.0s
+
+running (1m21.9s), 200/200 VUs, 10716 complete and 0 interrupted iterations
+inscription_peak   [  68% ] 200/200 VUs  1m21.9s/2m00.0s
+
+running (1m22.9s), 200/200 VUs, 10858 complete and 0 interrupted iterations
+inscription_peak   [  69% ] 200/200 VUs  1m22.9s/2m00.0s
+
+running (1m23.9s), 200/200 VUs, 10996 complete and 0 interrupted iterations
+inscription_peak   [  70% ] 200/200 VUs  1m23.9s/2m00.0s
+
+running (1m24.9s), 200/200 VUs, 11145 complete and 0 interrupted iterations
+inscription_peak   [  71% ] 200/200 VUs  1m24.9s/2m00.0s
+
+running (1m25.9s), 200/200 VUs, 11380 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m25.9s/2m00.0s
+
+running (1m26.9s), 200/200 VUs, 11391 complete and 0 interrupted iterations
+inscription_peak   [  72% ] 200/200 VUs  1m26.9s/2m00.0s
+
+running (1m27.9s), 200/200 VUs, 11666 complete and 0 interrupted iterations
+inscription_peak   [  73% ] 200/200 VUs  1m27.9s/2m00.0s
+
+running (1m28.9s), 200/200 VUs, 11707 complete and 0 interrupted iterations
+inscription_peak   [  74% ] 200/200 VUs  1m28.9s/2m00.0s
+
+running (1m29.9s), 200/200 VUs, 11777 complete and 0 interrupted iterations
+inscription_peak   [  75% ] 200/200 VUs  1m29.9s/2m00.0s
+
+running (1m30.9s), 196/200 VUs, 11961 complete and 0 interrupted iterations
+inscription_peak   [  76% ] 196/200 VUs  1m30.9s/2m00.0s
+
+running (1m31.9s), 192/200 VUs, 12138 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 192/200 VUs  1m31.9s/2m00.0s
+
+running (1m32.9s), 188/200 VUs, 12281 complete and 0 interrupted iterations
+inscription_peak   [  77% ] 188/200 VUs  1m32.9s/2m00.0s
+
+running (1m33.9s), 180/200 VUs, 12374 complete and 0 interrupted iterations
+inscription_peak   [  78% ] 180/200 VUs  1m33.9s/2m00.0s
+
+running (1m34.9s), 171/200 VUs, 12560 complete and 0 interrupted iterations
+inscription_peak   [  79% ] 171/200 VUs  1m34.9s/2m00.0s
+
+running (1m35.9s), 167/200 VUs, 12627 complete and 0 interrupted iterations
+inscription_peak   [  80% ] 167/200 VUs  1m35.9s/2m00.0s
+
+running (1m36.9s), 157/200 VUs, 12767 complete and 0 interrupted iterations
+inscription_peak   [  81% ] 157/200 VUs  1m36.9s/2m00.0s
+
+running (1m37.9s), 156/200 VUs, 12854 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 156/200 VUs  1m37.9s/2m00.0s
+
+running (1m38.9s), 144/200 VUs, 12977 complete and 0 interrupted iterations
+inscription_peak   [  82% ] 144/200 VUs  1m38.9s/2m00.0s
+
+running (1m39.9s), 137/200 VUs, 13115 complete and 0 interrupted iterations
+inscription_peak   [  83% ] 137/200 VUs  1m39.9s/2m00.0s
+
+running (1m40.9s), 131/200 VUs, 13247 complete and 0 interrupted iterations
+inscription_peak   [  84% ] 131/200 VUs  1m40.9s/2m00.0s
+
+running (1m41.9s), 124/200 VUs, 13371 complete and 0 interrupted iterations
+inscription_peak   [  85% ] 124/200 VUs  1m41.9s/2m00.0s
+
+running (1m42.9s), 115/200 VUs, 13545 complete and 0 interrupted iterations
+inscription_peak   [  86% ] 115/200 VUs  1m42.9s/2m00.0s
+
+running (1m43.9s), 111/200 VUs, 13626 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 111/200 VUs  1m43.9s/2m00.0s
+
+running (1m44.9s), 109/200 VUs, 13675 complete and 0 interrupted iterations
+inscription_peak   [  87% ] 109/200 VUs  1m44.9s/2m00.0s
+
+running (1m45.9s), 100/200 VUs, 13734 complete and 0 interrupted iterations
+inscription_peak   [  88% ] 100/200 VUs  1m45.9s/2m00.0s
+
+running (1m46.9s), 094/200 VUs, 13800 complete and 0 interrupted iterations
+inscription_peak   [  89% ] 094/200 VUs  1m46.9s/2m00.0s
+
+running (1m47.9s), 088/200 VUs, 13859 complete and 0 interrupted iterations
+inscription_peak   [  90% ] 088/200 VUs  1m47.9s/2m00.0s
+
+running (1m48.9s), 087/200 VUs, 13866 complete and 0 interrupted iterations
+inscription_peak   [  91% ] 087/200 VUs  1m48.9s/2m00.0s
+
+running (1m49.9s), 069/200 VUs, 13991 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 069/200 VUs  1m49.9s/2m00.0s
+
+running (1m50.9s), 066/200 VUs, 14018 complete and 0 interrupted iterations
+inscription_peak   [  92% ] 066/200 VUs  1m50.9s/2m00.0s
+
+running (1m51.9s), 063/200 VUs, 14035 complete and 0 interrupted iterations
+inscription_peak   [  93% ] 063/200 VUs  1m51.9s/2m00.0s
+
+running (1m52.9s), 053/200 VUs, 14093 complete and 0 interrupted iterations
+inscription_peak   [  94% ] 053/200 VUs  1m52.9s/2m00.0s
+
+running (1m53.9s), 053/200 VUs, 14098 complete and 0 interrupted iterations
+inscription_peak   [  95% ] 053/200 VUs  1m53.9s/2m00.0s
+
+running (1m54.9s), 037/200 VUs, 14153 complete and 0 interrupted iterations
+inscription_peak   [  96% ] 037/200 VUs  1m54.9s/2m00.0s
+
+running (1m55.9s), 032/200 VUs, 14184 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 032/200 VUs  1m55.9s/2m00.0s
+
+running (1m56.9s), 024/200 VUs, 14216 complete and 0 interrupted iterations
+inscription_peak   [  97% ] 024/200 VUs  1m56.9s/2m00.0s
+
+running (1m57.9s), 016/200 VUs, 14258 complete and 0 interrupted iterations
+inscription_peak   [  98% ] 016/200 VUs  1m57.9s/2m00.0s
+
+running (1m58.9s), 010/200 VUs, 14287 complete and 0 interrupted iterations
+inscription_peak   [  99% ] 010/200 VUs  1m58.9s/2m00.0s
+
+running (1m59.9s), 003/200 VUs, 14304 complete and 0 interrupted iterations
+inscription_peak   [ 100% ] 003/200 VUs  1m59.9s/2m00.0s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<2000' p(95)=2.11s
+
+    http_req_failed
+    ✓ 'rate<0.05' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 14307   119.059773/s
+    checks_succeeded...: 100.00% 14307 out of 14307
+    checks_failed......: 0.00%   0 out of 14307
+
+    ✓ status is 200
+    ✓ created 201
+
+    HTTP
+    http_req_duration..............: avg=767.43ms min=2.46ms   med=619.51ms max=6.26s p(90)=1.71s p(95)=2.11s
+      { expected_response:true }...: avg=767.43ms min=2.46ms   med=619.51ms max=6.26s p(90)=1.71s p(95)=2.11s
+    http_req_failed................: 0.00%  0 out of 14307
+    http_reqs......................: 14307  119.059773/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.26s    min=502.98ms med=1.12s    max=6.76s p(90)=2.21s p(95)=2.62s
+    iterations.....................: 14307  119.059773/s
+    vus............................: 3      min=3          max=200
+    vus_max........................: 200    min=200        max=200
+
+    NETWORK
+    data_received..................: 20 MB  165 kB/s
+    data_sent......................: 2.2 MB 18 kB/s
+
+
+
+
+running (2m00.2s), 000/200 VUs, 14307 complete and 0 interrupted iterations
+inscription_peak ✓ [ 100% ] 000/200 VUs  2m0s
+time="2026-02-16T07:30:41Z" level=error msg="thresholds on metrics 'http_req_duration' have been crossed"
+[4/5] Collecte des métriques Kubernetes...
+[5/5] Nettoyage...
+=== Nettoyage des autoscalers ===
+horizontalpodautoscaler.autoscaling "keda-hpa-fastapi-keda" deleted from academic namespace
+No resources found
+scaledobject.keda.sh "fastapi-keda" deleted from academic namespace
+=== Reset replicas ===
+deployment.apps/fastapi-backend scaled
+=== Nettoyage table students (hors données initiales) ===
+DELETE 0
+DELETE 4291
+=== Attente stabilisation (15s) ===
+NAME                               READY   STATUS    RESTARTS   AGE
+fastapi-backend-8666df464d-s67n7   1/1     Running   0          76m
+fastapi-backend-8666df464d-snd9k   1/1     Running   0          79m
+=== Reset terminé ===
+
+=== Test s7/c2/run3 terminé ===
+Résultats: results/s7/c2/run3_20260216_072840.json
+Métriques: results/s7/c2/run3_20260216_072840_metrics.json
+Logs:      results/s7/c2/run3_20260216_072840.log
+Pause de 15s...
+=== S7/C2 terminé ===

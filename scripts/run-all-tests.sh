@@ -1,16 +1,16 @@
 #!/bin/bash
 # Lance les 24 tests : 4 stratégies × 2 scénarios × 3 répétitions
-
 STRATEGIES=("s1" "s2" "s4" "s7")
 SCENARIOS=("c2" "c4")
 RUNS=3
-
 TOTAL=$((${#STRATEGIES[@]} * ${#SCENARIOS[@]} * RUNS))
 COUNT=0
+ESTIMATED_MINUTES=33
+START_EPOCH=$(date +%s)
 
 echo "=============================================="
 echo " Lancement de $TOTAL tests"
-echo " Durée estimée: ~33 minutes"
+echo " Durée estimée: ~${ESTIMATED_MINUTES} minutes"
 echo " Début: $(date)"
 echo "=============================================="
 
@@ -27,8 +27,28 @@ for strategy in "${STRATEGIES[@]}"; do
     done
 done
 
+END_EPOCH=$(date +%s)
+ELAPSED_SECONDS=$((END_EPOCH - START_EPOCH))
+ELAPSED_MINUTES=$((ELAPSED_SECONDS / 60))
+ELAPSED_REMAINING=$((ELAPSED_SECONDS % 60))
+ESTIMATED_SECONDS=$((ESTIMATED_MINUTES * 60))
+DIFF_SECONDS=$((ELAPSED_SECONDS - ESTIMATED_SECONDS))
+
+if [ $DIFF_SECONDS -ge 0 ]; then
+    DIFF_SIGN="+"
+else
+    DIFF_SIGN="-"
+    DIFF_SECONDS=$((-DIFF_SECONDS))
+fi
+DIFF_MINUTES=$((DIFF_SECONDS / 60))
+DIFF_REMAINING=$((DIFF_SECONDS % 60))
+
 echo ""
 echo "=============================================="
 echo " $TOTAL tests terminés !"
-echo " Fin: $(date)"
+echo " Début: $(date -d @$START_EPOCH 2>/dev/null || date -r $START_EPOCH)"
+echo " Fin:   $(date)"
+echo " Durée réelle:  ${ELAPSED_MINUTES}m ${ELAPSED_REMAINING}s"
+echo " Durée estimée: ${ESTIMATED_MINUTES}m 00s"
+echo " Différence:    ${DIFF_SIGN}${DIFF_MINUTES}m ${DIFF_REMAINING}s"
 echo "=============================================="

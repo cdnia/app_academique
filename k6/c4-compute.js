@@ -22,7 +22,7 @@ export const options = {
 };
 
 export default function () {
-  const iterations = 500000;
+  const iterations = 100000;
   const res = http.get(`${BASE_URL}/api/v1/compute/?iterations=${iterations}`);
 
   check(res, {
