@@ -16,4 +16,5 @@ dist/
 .DS_Store
 
 # run tests of strategies directory
-results
+results/
+results_v5_backup/
